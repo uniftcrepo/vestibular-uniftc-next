@@ -1,0 +1,105 @@
+[
+    {
+    "id": "1",
+    "forma_de_ingresso": "Vestibular Super Bolsa Prova 21/11",
+    "nome_da_aba": "Vestibular Super Bolsa Prova 21/11",
+    "nome_no_acompanhamento": "Vestibular Super Bolsa <br /> Prova 21/11",
+    "titulo":"Super Bolsa, 2ª edição. Última chamada!",
+    "subtitulo":"Bolsas de estudo de até 100%* em todo o curso para os melhores colocados",
+    "texto_legal": "Condições válidas de 21/09/2020 a 30/10/2020<br>*Exceto medicina. <a href='https://www.uniftc.edu.br/graduacao/edital-manual-e-regulamentos/'>Consulte regulamento e condições</a>.",
+    "concurso": "355",
+    "posicao": "first",
+    "idinscricao": "tradicional"
+  },
+  {
+    "id": "2",
+    "forma_de_ingresso": "Vestibular Super Bolsa Prova 08/11",
+    "nome_da_aba": "Vestibular Super Bolsa Prova 08/11",
+    "nome_no_acompanhamento": "Vestibular Super Bolsa <br /> Prova 08/11",
+    "titulo":"300 Bolsas de Estudo",
+    "subtitulo":"Bolsas de estudo de até 100%* em todo o curso para os melhores colocados",
+    "texto_legal": "Condições válidas de 21/09/2020 a 30/10/2020<br>*Exceto medicina. <a href='https://www.uniftc.edu.br/graduacao/edital-manual-e-regulamentos/'>Consulte regulamento e condições</a>.",
+    "concurso": "353",
+    "posicao": "second",
+    "idinscricao": "tradicional"
+  },
+  {
+    "id": "3",
+    "forma_de_ingresso": "Vestibular Online",
+    "nome_da_aba": "Vestibular<br /> Online",
+    "nome_no_acompanhamento": "Vestibular<br /> Online",
+    "titulo": "1ª Mensalidade por R$49,90*",
+    "subtitulo":"E também Bolsa de até 50%* nas demais mensalidades até o final do curso.",
+    "texto_legal": "Condições válidas de 21/09/2020 a 12/10/2020.<br />*Exceto medicina. <a href='https://www.uniftc.edu.br/graduacao/edital-manual-e-regulamentos/'>Consulte regulamento e condições</a>.",
+    "botao_de_inscricao_ate": "indefinido",
+    "concurso": "339",
+    "posicao": "thrid",
+    "idinscricao": "online"
+  },
+  {
+    "id": "4",
+    "forma_de_ingresso": "Use sua nota do ENEM",
+    "nome_da_aba": "ENEM",
+    "nome_no_acompanhamento": "Use sua nota<br /> do ENEM",
+    "titulo": "1ª Mensalidade por R$49,90*",
+    "subtitulo":"E também Bolsa de até 50%* nas demais mensalidades até o final do curso.",
+    "texto_legal":"Condições válidas de 21/09/2020 a 12/10/2020.<br />*Exceto medicina. <a href='https://www.uniftc.edu.br/graduacao/edital-manual-e-regulamentos/'>Consulte regulamento e condições</a>.",
+    "botao_de_inscricao_ate": "indefinido",
+    "concurso": "341",
+    "posicao": "fourth",
+    "idinscricao": "enem"
+  },
+  {
+    "id": "5",
+    "forma_de_ingresso": "Segunda Graduação",
+    "nome_da_aba": "Segunda<br /> Graduação",
+    "nome_no_acompanhamento": "Segunda<br /> Graduação",
+    "titulo": "1ª Mensalidade por R$49,90*",
+    "subtitulo": "E também Bolsa de até 50%* nas demais mensalidades até o final do curso.",
+    "texto_legal":"Condições válidas de 21/09/2020 a 12/10/2020.<br />*Exceto medicina. <a href='https://www.uniftc.edu.br/graduacao/edital-manual-e-regulamentos/'>Consulte regulamento e condições</a>.",
+    "botao_de_inscricao_ate": "indefinido",
+    "concurso": "345",
+    "posicao": "fifth",
+    "idinscricao": "sg"
+  },
+  {
+    "id": "6",
+    "forma_de_ingresso": "Transferência Externa",
+    "nome_da_aba": "Transferência<br /> Externa",
+    "nome_no_acompanhamento": "Transferência<br /> Externa",
+    "titulo": "1ª Mensalidade por R$49,90*",
+    "subtitulo": "E também Bolsa de até 50%* nas demais mensalidades até o final do curso.",
+    "texto_legal": "Condições válidas de 21/09/2020 a 12/10/2020.<br />*Exceto medicina. <a href='https://www.uniftc.edu.br/graduacao/edital-manual-e-regulamentos/'>Consulte regulamento e condições</a>.",
+    "botao_de_inscricao_ate": "indefinido",
+    "concurso": "343",
+    "posicao": "sixth",
+    "idinscricao": "te"
+  },
+  {
+    "id": "7",
+    "forma_de_ingresso": "Quero Voltar - Reingresso",
+    "nome_da_aba": "Reingresso",
+    "nome_no_acompanhamento": "Quero Voltar -<br /> Reingresso",
+    "titulo": "1ª Mensalidade por R$49,90*",
+    "subtitulo":"E também Bolsa de até 50%* nas demais mensalidades até o final do curso.",
+    "texto_legal": "Condições válidas de 21/09/2020 a 12/10/2020.<br />*Exceto medicina. <a href='https://www.uniftc.edu.br/graduacao/edital-manual-e-regulamentos/'>Consulte regulamento e condições</a>.",
+    "botao_de_inscricao_ate": "indefinido",
+    "concurso": "347",
+    "posicao": "sevth",
+    "idinscricao": "reingresso"
+  },
+  {
+    "id": "8",
+    "forma_de_ingresso": "Aproveitamento de Resultado",
+    "nome_da_aba": "Aproveitamento<br /> de Resultado",
+    "nome_no_acompanhamento": "Aproveitamento<br /> de Resultado",
+    "titulo": "1ª Mensalidade por R$49,90*",
+    "subtitulo": "E também Bolsa de até 50%* nas demais mensalidades até o final do curso.",
+    "texto_legal": "Condições válidas de 21/09/2020 a 12/10/2020.<br />*Exceto medicina. <a href='https://www.uniftc.edu.br/graduacao/edital-manual-e-regulamentos/'>Consulte regulamento e condições</a>.",
+    "botao_de_inscricao_ate": "indefinido",
+    "concurso": "354",
+    "posicao": "eigth",
+    "idinscricao": "aproveitamento"
+  }
+
+]
