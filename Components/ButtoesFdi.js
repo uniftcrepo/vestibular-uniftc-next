@@ -18,6 +18,7 @@ import Formulario from "./elementos/form";
 import { utms } from "../Components/functions/Utms";
 
 import { useDispatch, useSelector } from "react-redux";
+import { getFdi, getFdiTextoLegal } from "../src/store/modules/fdi/actions";
 /* import { getFdi, getFdiTextoLegal } from "../../store/modules/fdi/actions";
 import {  direito5Curso, getCurso } from "../../store/modules/curso/actions";
 import { getConsultor } from "../../store/modules/consultor/actions"; */

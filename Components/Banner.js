@@ -5,8 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // swiper bundle styles
 import "swiper/swiper-bundle.min.css";
 import styled from "styled-components";
-
-import { api } from "../pages/dashboard/api";
 import { useDispatch, useSelector } from "react-redux";
 /* import { getBannerView } from "../../store/modules/banner/actions";
 import {
@@ -147,7 +145,7 @@ const Banner = ({ consultorId}) => {
     if (link !== "") {
       return consultorId === undefined ? (
         <a href={link} key={bannerTipo}>
-          <Image src={`${api}/banners_desktop/${bannerTipo}`} alt="" fluid />
+          <Image src={`${process.env.NEXT_PUBLIC_API}/banners_desktop/${bannerTipo}`} alt="" fluid />
         </a>
       ) : (
         <a href={link}>
@@ -164,7 +162,7 @@ const Banner = ({ consultorId}) => {
                 </Complemento>
               </Texto>
               <Avatar
-                src={`${api}/consultor/${consultor.codigoConsultor}/${consultor.fotoConsultor}`}
+                src={`${process.env.NEXT_PUBLIC_API}/consultor/${consultor.codigoConsultor}/${consultor.fotoConsultor}`}
               />
             </div>
           </div>
@@ -173,7 +171,7 @@ const Banner = ({ consultorId}) => {
     } else {
       return consultorId === undefined ? (
         <Image
-          src={`${api}/banners_desktop/${bannerTipo}`}
+          src={`${process.env.NEXT_PUBLIC_API}/banners_desktop/${bannerTipo}`}
           alt=""
           fluid
           onClick={modal ? handleShow : undefined}
@@ -196,7 +194,7 @@ const Banner = ({ consultorId}) => {
               </Complemento>
             </Texto>
             <Avatar
-              src={`${api}/consultor/${consultor.codigoConsultor}/${consultor.fotoConsultor}`}
+              src={`${process.env.NEXT_PUBLIC_API}/consultor/${consultor.codigoConsultor}/${consultor.fotoConsultor}`}
             />
           </div>
         </div>
@@ -273,7 +271,7 @@ const Banner = ({ consultorId}) => {
                    </Complemento>
                  </Texto>
                  <Avatar
-                   src={`${api}/consultor/${consultor.codigoConsultor}/${consultor.fotoConsultor}`}
+                   src={`${process.env.NEXT_PUBLIC_API}/consultor/${consultor.codigoConsultor}/${consultor.fotoConsultor}`}
                  />
                </div>
              </div>
