@@ -348,19 +348,19 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       const cod_curso = event.target.value;
       const cidade = groupCursos.filter(x => x.cod_curso ===cod_curso)
       var cod_curso_direito5;
-      if(cod_curso === "DIRCIC"){
+      if(cod_curso === "DIRCIC" || cidade[0].curso === "Direito" || cidade[0].curso === "Engenharia Civil" || cidade[0].curso === "Administração" || cidade[0].curso === "Sistemas de Informação" || cidade[0].curso === "Ciências Contábeis" || cidade[0].curso ==="Comunicação Social - Publicidade e Propaganda"){
         if(nomeAba === "Vestibular Online"){
-          setcodConcurso(468);
-          cod_curso_direito5 = 468;
+          setcodConcurso(486);
+          cod_curso_direito5 = 486;
         } 
-        if(nomeAba === "Use sua nota no ENEM"){
-          setcodConcurso(470);
-          cod_curso_direito5 = 470;
+        if(nomeAba === "ENEM"){
+          setcodConcurso(488);
+          cod_curso_direito5 = 488;
         }
         
-        if(nomeAba === "Segunda Graduação"){
-          setcodConcurso(469);
-          cod_curso_direito5 = 469;
+        if(nomeAba === "Aproveitamento de Resultado"){
+          setcodConcurso(490);
+          cod_curso_direito5 = 490;
         }
       }else{
         setcodConcurso(concurso)

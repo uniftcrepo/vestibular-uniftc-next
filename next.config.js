@@ -9,9 +9,21 @@ module.exports = {
     // ssr and displayName are configured by default
     styledComponents: true,
   },
-  ...removeImports({
+  /* ...removeImports({
     webpack(config, options) {
       return config
     },
-  })
+  }), */
+  rewrites(){
+    return[
+      {
+        source: '/:path*',
+        destination: '/:path*'
+      },
+      {
+        source: '/:path*',
+        destination: 'http://localhost:4000/:path*'
+      },
+    ]
+  }
 }

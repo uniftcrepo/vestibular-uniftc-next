@@ -18,6 +18,8 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useSelector } from 'react-redux';
 import { useRouter } from "next/router"
 import { ParsedUrlQuery } from 'querystring';
+import api from "../src/services/api";
+
 const Consultor: NextPage = () => {
   const router = useRouter()
   const consultor = router.query.consultor
@@ -69,11 +71,16 @@ export const getStaticProps: GetStaticProps = wrapper.getStaticProps(
     }
 )
 export const getStaticPaths: GetStaticPaths = async () => {
+  const response = await api.get("/getConsultorVestibularUniftc");
+  
+  const consultor = await response.data;
+  const paths = consultor.map((post: { codigo: any; })=>{
+    return{
+      params:{consultor: post.codigo}
+    }
+  })
   return {
-    paths: [
-      { params: { consultor: 'FSA1051' }},
-      { params: { consultor: 'VIC0005' }}
-    ],
+    paths,
     fallback: false
   };
 };
