@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './react-confirm-alert-local.css'; */
 /* import '../public/static/RLDDFloatingItem.css' */
 import '../styles/RLDDFloatingItem.module.css'
-import "../styles/boardz.scss";
+import "../styles/boardz.module.scss";
+import 'react-loading-skeleton/dist/skeleton.css'
 import React, { FC } from 'react'
 import type { AppProps } from 'next/app'
 import { NextPage } from 'next';

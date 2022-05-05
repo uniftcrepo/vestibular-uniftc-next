@@ -72,6 +72,14 @@ export function removeFdiSuccess(id){
     }
   }
 }
+export function loadingFdi(loading){
+  return {
+    type:'@fdi/LOADINGSUCCESS',
+    payload:{
+      loading
+    }
+  }
+}
 /*
 export function updateBannerFailure(){
   return {

@@ -2,7 +2,7 @@ import { all, takeLatest,  put } from "redux-saga/effects";
 import api from "../../../services/api";
 import { toast } from "react-toastify";
 
-import { updateFdiSuccess, removeFdiSuccess, sucessoFdiTextoLegal } from "./actions";
+import { updateFdiSuccess, removeFdiSuccess, sucessoFdiTextoLegal, loadingFdi } from "./actions";
 export function* addFdiSaga({ payload }) {
   try {
   /*   var config = {
@@ -98,6 +98,7 @@ export function* updateFdiSaga({ payload }) {
 export function* getFdiSaga({ payload }) {
   try {
     //console.log(payload.tipoUnidade)
+    yield put(loadingFdi(true))
     var config = {
       headers: {
         "Access-Control-Allow-Headers": "Authorization",

@@ -24,7 +24,8 @@ async function initialTextoLegal(){
 
 const INITIAL_STATE = {
   fdi: [],
-  textoLegal: []
+  textoLegal: [],
+  loading: false,
 };
 
 
@@ -39,7 +40,10 @@ export default function fdi(state = INITIAL_STATE, action) {
           ...draft, // use previous state
           ...action.payload.fdi, // apply delta from hydration
         }
-        if (draft.fdi.fdi) nextState.fdi.fdi = draft.fdi.fdi // preserve count value on client side navigation
+        if (draft.fdi.fdi){
+          console.log('Loading HYDRATE:', draft.fdi.loading)
+          nextState.fdi.fdi = draft.fdi.fdi // preserve count value on client side navigation
+        } 
         return nextState
       }
       case '@fdi/CREATE':{
@@ -52,8 +56,14 @@ export default function fdi(state = INITIAL_STATE, action) {
           //console.log('Estou Success FDI')
           /* const nuevo = action.payload.fdi.map((i) => Number(i.id));
           console.log(nuevo) */
-          /* console.log(action.payload.fdi) */
+          console.log('Loading SUCCESS:', false)
+          draft.loading = false;
           draft.fdi = action.payload.fdi;
+          break;
+      }
+      case '@fdi/LOADINGSUCCESS':{
+          console.log('Loading LOADINGSUCCESS:', action.payload.loading)
+          draft.loading = action.payload.loading;
           break;
       }
       case '@fdi/SUCESSTEXTOLEGAL':{

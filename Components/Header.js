@@ -36,7 +36,7 @@ import telefone from "../public/imagens/telefone.svg";
 import { useDispatch, useSelector } from "react-redux";
 
 import { getFdi } from "../src/store/modules/fdi/actions";
-
+import Skeleton from 'react-loading-skeleton'
 
 
 export const HeaderSite = styled.header`
@@ -340,12 +340,20 @@ const Header = () => {
   const closeNav = () => {
     setExpanded(false);
   };
+ /*  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(true);
+    }, 2000);
+  },[]); */
 
 /*   useEffect(() => {
     setProfileState(main);
   }, [main]);
  */
 const fdiAbas = useSelector((state) => state.fdi.fdi);
+const loading = useSelector((state) => state.fdi.loading);
   useEffect(() => {
   
     window.onclick = function (event) {
@@ -409,9 +417,9 @@ const fdiAbas = useSelector((state) => state.fdi.fdi);
       <BarraMenuTopo1>
         <ContainerTop className="container">
           
-
+        {loading ? (<Skeleton variant="rectangular" count={1} height={50} width={1200}/>):(<>
           <LogoTop>
-            <img src={'/imagens/logo_top.svg'} className="img-responsive"  />
+          <img src={'/imagens/logo_top.svg'} className="img-responsive"  />
             <a
               href="https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1,%20UNIFTC"
               className="vest-iniciar-conversa"
@@ -446,6 +454,7 @@ const fdiAbas = useSelector((state) => state.fdi.fdi);
               </Dropdown.Menu>
             </Dropdown>
           </MenuTop>
+        </>)}
         </ContainerTop>
       </BarraMenuTopo1>
 

@@ -8,6 +8,7 @@ import {
   Accordion,
   Card,
   Image,
+  Form
 } from "react-bootstrap";
 import styled from "styled-components";
 import Button from "./elementos/ButtonClickLink";
@@ -88,12 +89,12 @@ export const Direito5 = styled.div`
   display: show;
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 401px;
   overflow: hidden;
   img {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 3px;
   }
   .direito5-container {
     width: 40%;
@@ -104,25 +105,33 @@ export const Direito5 = styled.div`
     color: #fff;
     margin: auto;
     position: absolute;
-    top: 0;
+    top: 27px;
     bottom: 0;
-    left: 550px;
+    left: 620px;
     right: 0;
   }
 
   .direito5-container div:nth-child(1) {
     font-size: 12px;
   }
-  .direito5-container div:nth-child(5) a {
+  .direito5-container div:nth-child(2) {
+    margin-left: 75px;
+    margin-top: 10px;
+  }
+  .direito5-container div:nth-child(3) {
+    margin-top: -13px;
+  }
+  .direito5-container div:nth-child(4) a {
     font-size: 16px;
     color: #fff;
+    text-decoration: underline !important;
   }
-  .direito5-container div:nth-child(5) div:nth-child(1) {
+  .direito5-container div:nth-child(4) div:nth-child(1) {
     font-size: 16px;
     color: #fff;
     margin-top: 11px;
   }
-  .direito5-container div:nth-child(5) div:nth-child(2) {
+  .direito5-container div:nth-child(4) div:nth-child(2) {
     font-size: 16px;
     color: #fff;
     margin: 0px;
@@ -149,7 +158,7 @@ export const Direito5Mobile = styled.div`
     }
     .direito5-container {
       /* width: 40%; */
-      height: 100px;
+      height: 44px;
       text-align: center;
       /* background: #000; */
       font-size: 30px;
@@ -161,12 +170,24 @@ export const Direito5Mobile = styled.div`
       left: 10px;
       right: 0;
     }
+    .direito5-container div:nth-child(1) {
+      font-size: 12px;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+    .direito5-container div:nth-child(2) {
+      margin-left: 17px;
+      margin-bottom: -9px;
+
+    }
+  
     .direito5-container div:nth-child(4) {
       margin: 28px;
     }
     .direito5-container div:nth-child(4) div {
       margin: -16px;
       text-decoration: underline;
+      margin-bottom: 6px;
     }
 
     .direito5-container div:nth-child(4) a,
@@ -486,6 +507,21 @@ const initialState = {
   /* id: 0, */
   faculdade: "uniftc",
 };
+const arrayFdiDireito5 =[ 
+  {
+    concurso: "Vestibular Online",
+    id: "486"
+  },
+  {
+    concurso: "Enem",
+    id: "488"
+  },
+  {
+    concurso: "Aproveitamento de Resultado",
+    id: "490"
+  }
+  
+];
 
 const ButtoesFdi = ({consultorId}) => {
   const [isMobile, setIsMobile] = useState();
@@ -501,6 +537,7 @@ const ButtoesFdi = ({consultorId}) => {
   const [token, setToken] = useState();
   const [idx, setIdx] = useState([]);
   const [tipoUnidadeSelecionada, setTipoUnidadeSelecionada] = useState("");
+  const [fdiDireito5, setFdiDireito5]= useState();
 
   const dispatch = useDispatch();
   const fdiAbas = useSelector((state) => state.fdi.fdi);
@@ -1008,144 +1045,122 @@ const ButtoesFdi = ({consultorId}) => {
 
         {tipoUnidadeSelecionada !== "uniftc-medicina" ? (
           <>
-            <Direito5>
-              <img src={'/imagens/direito-5.svg'} />
-              <div className="direito5-container">
-                <div>INSCREVA-SE</div>
+          <Direito5>
+            <img src={'/imagens/bg-direito-desktop.png'} />
+            <div className="direito5-container">
+              <div>INSCREVA-SE</div>
+              <div>
+                <Form.Group as={Col} xs={12} lg={10}>
+                  <Form.Control
+                    as="select"
+                    className="my-1 mr-sm-2"
+                    id="inlineFormCustomSelectPref"
+                    onChange={(e)=> setFdiDireito5(e.target.value)}
+                    name="cod_curso"
+                    required
+                    value={fdiDireito5}
+                  >
+                    <option value=''>Escolha como quer ingressar</option>
+                    {arrayFdiDireito5 && arrayFdiDireito5.map((fdi, idx) => (
+                       <option key={idx} value={fdi.id}>{fdi.concurso}</option>
+                    ))}
+                  </Form.Control>
+                </Form.Group>
+              </div>
+              <div>
+                <Button
+                  cor="#0093ff"
+                  colorTexto="#fff"
+                  fonteSize={"18px"}
+                  tamanho={"277px"}
+                  padding={"4px 20px 6px 20px"}
+                  texto={"Avançar"}
+                  marginLeft={"15px"}
+                  /*   tamanho={tamanho}
+              id={idinscricao} */
+                  borderSolid={"2px solid #0093ff"}
+                  disabled={!fdiDireito5}
+                  link={
+                    `https://inscricao.uniftc.edu.br/Login/${fdiDireito5}${utms()}`
+                  }
+                />
+              </div>
+             
+              <div>
                 <div>
-                  <Button
-                    cor="#fff0"
-                    fonteSize={"18px"}
-                    texto={"Vestibular Online"}
-                    tamanho={"272px"}
-                    padding={"6px 20px 6px 20px"}
-                    /*   tamanho={tamanho}
-                link={url_prova}
-                id={idinscricao} */
-                    borderSolid={"2px solid #fff"}
-                    link={
-                      `https://inscricao.uniftc.edu.br/Login/468${utms()}`
-                    }
-                  />
+                  <a href="https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1,%20UNIFTC">
+                    Inscrever pelo WhatsApp
+                  </a>
                 </div>
                 <div>
-                  <Button
-                    cor="#fff0"
-                    colorTexto="#fff"
-                    fonteSize={"18px"}
-                    tamanho={"272px"}
-                    padding={"6px 20px 6px 20px"}
-                    texto={"Usar nota do ENEM"}
-                    /*   tamanho={tamanho}
-                id={idinscricao} */
-                    borderSolid={"2px solid #fff"}
-                    link={
-                      `https://inscricao.uniftc.edu.br/Login/470${utms()}`
-                    }
-                  />
-                </div>
-                <div>
-                  <Button
-                    cor="#fff0"
-                    fonteSize={"18px"}
-                    tamanho={"272px"}
-                    padding={"6px 20px 6px 20px"}
-                    texto={"Segunda Graduação"}
-                    /*   tamanho={tamanho}
-                link={url_prova}
-                id={idinscricao} */
-                    borderSolid={"2px solid #fff"}
-                    link={
-                      `https://inscricao.uniftc.edu.br/Login/469${utms()}`
-                    }
-                  />
-                </div>
-                <div>
-                  <div>
-                    <a href="https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1,%20UNIFTC">
-                      Inscrever pelo WhatsApp
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://materiais.uniftc.edu.br/direito-5">
-                      Saiba mais sobre Direito 5.0
-                    </a>
-                  </div>
+                  <a href="https://materiais.uniftc.edu.br/direito-5">
+                    Saiba mais sobre Direito 5.0
+                  </a>
                 </div>
               </div>
-            </Direito5>
+            </div>
+          </Direito5>
 
-            <Direito5Mobile>
-              <img src={'/imagens/mob/direito-5-mobile.svg'} />
-              <div className="direito5-container">
+          <Direito5Mobile>
+            <img src={'/imagens/mob/bg-direito-mobile.png'} />
+            <div className="direito5-container">
+            <div>INSCREVA-SE</div>
+              <div>
+              <Form.Group as={Col} xs={11} lg={10}>
+                  <Form.Control
+                    as="select"
+                    className="my-1 mr-sm-2"
+                    id="inlineFormCustomSelectPref"
+                    onChange={(e)=> setFdiDireito5(e.target.value)}
+                    name="cod_curso"
+                    required
+                    value={fdiDireito5}
+                  >
+                    <option value=''>Escolha como quer ingressar</option>
+                    {arrayFdiDireito5 && arrayFdiDireito5.map((fdi, idx) => (
+                       <option key={idx} value={fdi.id}>{fdi.concurso}</option>
+                    ))}
+                  </Form.Control>
+                </Form.Group>
+              </div>
+              <div>
+                <Button
+                  cor="#0093ff"
+                  colorTexto="#fff"
+                  fonteSize={"17px"}
+                  tamanho={"261px"}
+                  tamanhoMobile={"261px"}
+                  padding={"6px 20px 6px 20px"}
+                  paddingMobile={"5px 20px 20px 20px"}
+                  texto={"Avançar"}
+                  fonteWeight={500}
+                  /*   tamanho={tamanho}
+              id={idinscricao} */
+                  disabled={!fdiDireito5}
+                  borderSolid={"2px solid #0093ff"}
+                  marginBottom={"5px"}
+                  link={
+                    `https://inscricao.uniftc.edu.br/Login/${fdiDireito5}${utms()}`
+                  }
+                  marginRight={"12px"}
+                />
+              </div>
+             
+              <div>
                 <div>
-                  <Button
-                    cor="#fff0"
-                    fonteSize={"18px"}
-                    texto={"Vestibular Online"}
-                    tamanho={"272px"}
-                    padding={"6px 20px 6px 20px"}
-                    paddingMobile={"7px 18px 20px 20px"}
-                    /*   tamanho={tamanho}
-                link={url_prova}
-                id={idinscricao} */
-                    borderSolid={"2px solid #fff"}
-                    marginBottom={"5px"}
-                    link={
-                      `https://inscricao.uniftc.edu.br/Login/468${utms()}`
-                    }
-                  />
+                  <a href="https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1,%20UNIFTC">
+                    Inscrever pelo WhatsApp
+                  </a>
                 </div>
                 <div>
-                  <Button
-                    cor="#fff0"
-                    colorTexto="#fff"
-                    fonteSize={"18px"}
-                    tamanho={"272px"}
-                    padding={"6px 20px 6px 20px"}
-                    paddingMobile={"7px 18px 20px 20px"}
-                    texto={"Usar nota do ENEM"}
-                    /*   tamanho={tamanho}
-                id={idinscricao} */
-                    borderSolid={"2px solid #fff"}
-                    marginBottom={"5px"}
-                    link={
-                      `https://inscricao.uniftc.edu.br/Login/470${utms()}`
-                    }
-                  />
-                </div>
-                <div>
-                  <Button
-                    cor="#fff0"
-                    fonteSize={"18px"}
-                    tamanho={"272px"}
-                    padding={"6px 20px 6px 20px"}
-                    texto={"Segunda Graduação"}
-                    paddingMobile={"7px 18px 20px 20px"}
-                    /*   tamanho={tamanho}
-                id={idinscricao} */
-                    borderSolid={"2px solid #fff"}
-                    marginBottom={"5px"}
-                    link={
-                      `https://inscricao.uniftc.edu.br/Login/469${utms()}`
-                    }
-                  />
-                </div>
-                <div>
-                  <div>
-                    <a href="https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1,%20UNIFTC">
-                      Inscrever pelo WhatsApp
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://materiais.uniftc.edu.br/direito-5">
-                      Saiba mais sobre Direito 5.0
-                    </a>
-                  </div>
+                  <a href="https://materiais.uniftc.edu.br/direito-5">
+                    Saiba mais sobre Direito 5.0
+                  </a>
                 </div>
               </div>
-            </Direito5Mobile>
-          </>
+            </div>
+          </Direito5Mobile>
+        </>
         ) : (
           <>
             <MegaRevisao>

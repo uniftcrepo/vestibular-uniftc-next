@@ -15,7 +15,7 @@ import {
 import BackgroundConsultor from "../public/imagens/consultor_background.svg";
 /* import Consultor from "../utils/consultor"; */
 import ModalMatriculaBlackWeek from "./elementos/ModalMatriculaBlackWeek";
-
+import Skeleton from 'react-loading-skeleton'
 SwiperCore.use([Pagination, Navigation]);
 export const BannerDiv = styled.div`
   margin-top: 149px;
@@ -203,8 +203,9 @@ const Banner = ({ consultorId}) => {
   };
 
 
-  
+
   const bannerView = useSelector((state) => state.banner.bannerView);
+ 
   const consultor = useSelector((state) => state.consultor.consultorFiltro);
   /* const cidades = useSelector((state) => state.consultor.cidades); */
 
@@ -212,7 +213,9 @@ const Banner = ({ consultorId}) => {
     setIsMobile(window.innerWidth <= 500);
  
   }, []);
-
+  //#endregionconst [hasPosts, setPost] = useState(false);
+  const loading = useSelector((state) => state.fdi.loading);
+//console.table(bannerView)
   return (
     <>
       <ModalMatriculaBlackWeek
@@ -220,8 +223,8 @@ const Banner = ({ consultorId}) => {
         onFecharModal={() => setShow(false)}
         size="xl"
       />
-      <BannerDiv
-      >
+     {loading ? (<div className="container"><Skeleton variant="rectangular" count={1} height={500} width={1200} /></div>): (<BannerDiv>
+        
         {consultorId === undefined ? ( <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -241,7 +244,7 @@ const Banner = ({ consultorId}) => {
                     {b.tipo === "desktop" && !isMobile && (
                       <SwiperSlide key={Math.random()+index}>
                         <div key={Math.random()+index} className="d-none d-lg-block d-sm-block d-print-block">
-                          {banners(b.banner, b.link, consultor)}
+                          {banners(b.banner, b.link, consultor)  }
                         </div>
                       </SwiperSlide>
                     )}
@@ -277,8 +280,8 @@ const Banner = ({ consultorId}) => {
              </div>
         )}
        
-      </BannerDiv>
-    </>
+      </BannerDiv>)} 
+    </>  
   );
 };
 
