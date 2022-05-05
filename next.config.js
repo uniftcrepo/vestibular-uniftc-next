@@ -5,10 +5,10 @@ const removeImports = require('next-remove-imports')({
 
 
 module.exports = {
- /*  compiler: {
-   ssr and displayName are configured by default
+  compiler: {
+    // ssr and displayName are configured by default
     styledComponents: true,
-  }, */
+  },
   /* ...removeImports({
     webpack(config, options) {
       return config
