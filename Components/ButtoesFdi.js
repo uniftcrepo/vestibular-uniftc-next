@@ -1166,11 +1166,11 @@ const ButtoesFdi = ({consultorId}) => {
             <MegaRevisao>
               {!isMobile ? (
                 <a target="_blank" href="https://medicina.uniftc.edu.br">
-                  <Image src={ConsultorMedicinaBanner} fluid />
+                  <Image src={'/imagens/consultor_medicina_1200x400.png'} fluid />
                 </a>
               ) : (
                 <a target="_blank" href="https://medicina.uniftc.edu.br">
-                  <Image src={ConsultorMedicinaBannerMobile} fluid />
+                  <Image src={'/imagens/mob/consultor_medicina_640x738.png'} fluid />
                 </a>
               )}
             </MegaRevisao>

@@ -56,13 +56,12 @@ export default function fdi(state = INITIAL_STATE, action) {
           //console.log('Estou Success FDI')
           /* const nuevo = action.payload.fdi.map((i) => Number(i.id));
           console.log(nuevo) */
-          console.log('Loading SUCCESS:', false)
+          
           draft.loading = false;
           draft.fdi = action.payload.fdi;
           break;
       }
       case '@fdi/LOADINGSUCCESS':{
-          console.log('Loading LOADINGSUCCESS:', action.payload.loading)
           draft.loading = action.payload.loading;
           break;
       }
