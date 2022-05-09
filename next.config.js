@@ -22,7 +22,7 @@ module.exports = {
       },
       {
         source: '/:path*',
-        destination: 'http://localhost:4000/:path*'
+        destination: 'http://localhost:6000/:path*'
       },
     ]
   }
