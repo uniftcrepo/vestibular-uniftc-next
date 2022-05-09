@@ -112,10 +112,13 @@ export function* getFdiSaga({ payload }) {
       "/getFdiVestibularUniftc",
       { config }
     );
-    const uniftc = response.data.filter(e =>{
+    const uniftc = response.data.filter(e => {
       return e.faculdade === payload.tipoUnidade.faculdade
     })
-    yield put(updateFdiSuccess(uniftc));
+    const ordemUniftc = uniftc.sort((x, y) => {
+      return x.ordem - y.ordem
+    })
+    yield put(updateFdiSuccess(ordemUniftc));
   } catch (error) {
     //toast.error('Banner não foi excluido tente novamente')
     //yield put(updateBannerFailure());
