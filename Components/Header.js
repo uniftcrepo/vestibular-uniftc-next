@@ -254,12 +254,12 @@ export const TelefoneWhatzap = styled.div`
 `;
 
 export const LogoUniftcMobile = styled.div`
-  @media screen and (min-width: 50px) and (max-width: 768px) {
+  @media ${({ theme }) => theme.breakpoints.mobile}{
     display: show;
     img {
       width: 167px;
       height: 76px;
-      margin-left: 20px;
+      margin-bottom: 9px !important;
     }
   }
   @media (min-width: 768px) {

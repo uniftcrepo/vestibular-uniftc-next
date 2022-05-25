@@ -1,30 +1,12 @@
 import React from "react";
-/* import background from "../imagens/background_diferenciais.png";
-import seta_rosa from "../imagens/seta-rosa.png"; */
-/* import "../styled/styles_novo.scss"; */
-/* import "../styled/boardz.scss"; */
-/* import "../styled/wing.min.css"; */
 import styled, { css, createGlobalStyle } from "styled-components";
-/* import Popover from "react-bootstrap/Popover";
-import backImage from "../utils/dataFdi";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger"; */
-/* import parse from "html-react-parser";
-import { DATA } from "../utils/data";
-import seta from "../imagens/aviaozinho.png";
-*/
+import { ImageLoad } from "../hooks/ImageLoad";
+
 import { Link } from "react-scroll";
 import Button from "./elementos/ButtonClickLink";
 
 export const Container = styled.div`
-  /*
-body {	
-    background-color: #1C3661;
-    margin: 0;
-    padding: 0;
-    color: #000;
-    font-family: 'Open Sans', sans-serif;
-}
-*/
+ 
  .row{
     margin-right: 0px;
     margin-left: 0px;
@@ -228,16 +210,8 @@ BOX 1
       z-index: 2;
     }
 
-  @media screen and (min-height: 769px) and (max-height: 976px){
-   /*  #passaro {
-      position: absolute;
-      left: calc((100% - 58rem) / 2);
-      top: calc((100% + 288rem) / 2);
-      z-index: 2;
-    } */
-  }
 
-  @media screen and (min-width: 50px) and (max-width: 768px) {
+  @media ${({ theme }) => theme.breakpoints.mobile} {
     .campanha p {
       /*  font-style: italic; */
       font-weight: 900;
@@ -294,7 +268,6 @@ BOX 1
     }
 
     #box1 .topicos {
-      /**/
       font-size: 14px;
       text-align: left;
       line-height: 24px;
@@ -531,11 +504,11 @@ function Diferenciais() {
           </h3>
 
           <div className="col-md-5 col-sm-5 d-none d-sm-block foto">
-            <img src={'/imagens/img-01.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/img-01.png'} />
           </div>
 
           <div className="d-lg-none d-md-none d-sm-none container foto">
-            <img src={'/imagens/mob/mob-img-01.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/mob/mob-img-01.png'} />
           </div>
 
           <div className="col-md-7 col-sm-7 col-xs-12 caixa">
@@ -588,7 +561,7 @@ function Diferenciais() {
           </h3>
 
           <div className="d-lg-none d-md-none d-sm-none container foto">
-            <img src={'/imagens/mob/mob-img-02.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/mob/mob-img-02.png'} />
           </div>
 
           <div className="col-md-7 col-sm-7">
@@ -633,7 +606,7 @@ function Diferenciais() {
           </div>
 
           <div className="col-md-5 col-sm-5 d-none d-sm-block foto">
-            <img src={'/imagens/img-02.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/img-02.png'} />
           </div>
         </div>
 
@@ -646,11 +619,11 @@ function Diferenciais() {
           </h3>
 
           <div className="col-md-5 col-sm-5 d-none d-sm-block foto">
-            <img src={'/imagens/img-03.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/img-03.png'} />
           </div>
 
           <div className="d-lg-none d-md-none d-sm-none container foto">
-            <img src={'/imagens/mob/mob-img-03.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/mob/mob-img-03.png'} />
           </div>
 
           <div className="col-md-7 col-sm-7 col-xs-12 caixa">
@@ -720,7 +693,7 @@ function Diferenciais() {
           </h3>
 
           <div className="d-lg-none d-md-none d-sm-none container foto">
-            <img src={'/imagens/mob/mob-img-04.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/mob/mob-img-04.png'} />
           </div>
 
           <div className="col-md-7 col-sm-7 ">
@@ -783,7 +756,7 @@ function Diferenciais() {
           </div>
 
           <div className="col-md-5 col-sm-5 d-none d-sm-block foto">
-            <img src={'/imagens/img-04.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/img-04.png'} />
           </div>
         </div>
 
@@ -795,11 +768,11 @@ function Diferenciais() {
           </h3>
 
           <div className="col-md-5 col-sm-5 d-none d-sm-block foto">
-            <img src={'/imagens/img-05.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/img-05.png'} />
           </div>
 
           <div className="d-lg-none d-md-none d-sm-none  container foto">
-            <img src={'/imagens/mob/mob-img-05.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/mob/mob-img-05.png'} />
           </div>
 
           <div className="col-md-7 col-sm-7 col-xs-12 caixa">
@@ -868,7 +841,7 @@ function Diferenciais() {
           </h3>
 
           <div className="d-lg-none d-md-none d-sm-none container foto">
-            <img src={'/imagens/mob/mob-img-06.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/mob/mob-img-06.png'} />
           </div>
 
           <div className="col-md-7 col-sm-7 ">
@@ -929,7 +902,7 @@ function Diferenciais() {
           </div>
 
           <div className="col-md-5 col-sm-5 d-none d-sm-block container foto">
-            <img src={'/imagens/img-06.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/img-06.png'} />
           </div>
         </div>
 
@@ -941,11 +914,11 @@ function Diferenciais() {
           </h3>
 
           <div className="col-md-5 col-sm-5 d-none d-sm-block foto">
-            <img src={'/imagens/img-07.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/img-07.png'} />
           </div>
 
           <div className="d-lg-none d-md-none d-sm-none container foto">
-            <img src={'/imagens/mob/mob-img-07.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/mob/mob-img-07.png'} />
           </div>
 
           <div className="col-md-7 col-sm-7 col-xs-12 caixa">
@@ -1009,7 +982,7 @@ function Diferenciais() {
           </h3>
 
           <div className="d-lg-none d-md-none d-sm-none container foto">
-            <img src={'/imagens/mob/mob-img-08.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/mob/mob-img-08.png'} />
           </div>
 
           <div className="col-md-7 col-sm-7 ">
@@ -1063,7 +1036,7 @@ function Diferenciais() {
           </div>
 
           <div className="col-md-5 col-sm-5 d-none d-sm-block foto">
-            <img src={'/imagens/img-01.png'} />
+            <ImageLoad tipo="diferenciais" src={'/imagens/img-01.png'} />
           </div>
         </div>
         <div id="box5">

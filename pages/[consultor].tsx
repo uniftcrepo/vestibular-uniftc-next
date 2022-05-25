@@ -24,7 +24,7 @@ const Consultor: NextPage = () => {
   const router = useRouter()
   const consultor = router.query.consultor
   useEffect(() => {
-    document.title = "Vestibular UNIFTC 2022.1 - Inscreva-se"
+    document.title = "Vestibular UNIFTC 2022.2 - Inscreva-se"
   }, [])
   return (
     <div className="App">

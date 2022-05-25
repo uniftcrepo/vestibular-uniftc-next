@@ -307,7 +307,7 @@ const Footer = () => {
             </div>
             <div className="links">
               <div className="footer-fdi">
-                <p>Vestibular UNIFTC 2022.1</p>
+                <p>Vestibular UNIFTC 2022.2</p>
                 <p>
                   <a
                     className="vestibular_uni"

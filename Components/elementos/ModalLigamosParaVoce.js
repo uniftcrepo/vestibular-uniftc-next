@@ -449,14 +449,14 @@ const ModalLigamosParaVoce = ({ onAbreModal, onFecharModal }) => {
               </Texto>
               <ContainerGrupTexto>
                 <ContainerTexto>
-                  <img src={ImgHorario} />
+                <img src={'/imagens/contato_horario.svg'} />
                   <TextoHorarioGrupo>
                     <TextoDiasSemana>Segunda a Sexta</TextoDiasSemana>
                     <TextoHorarioSemana>8h às 20h</TextoHorarioSemana>
                   </TextoHorarioGrupo>
                 </ContainerTexto>
                 <ContainerTexto>
-                  <img src={ImgHorario} />
+                <img src={'/imagens/contato_horario.svg'} />
                   <TextoHorarioGrupo>
                     <TextoDiasSemana>Sábado</TextoDiasSemana>
                     <TextoHorarioSemana>8h às 14h</TextoHorarioSemana>

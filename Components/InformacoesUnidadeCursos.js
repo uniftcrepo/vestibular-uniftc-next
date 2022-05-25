@@ -1,10 +1,11 @@
 import React, { useEffect, useState, } from "react";
-import { Row, Col, Form} from "react-bootstrap";
+import { Row, Col, Form } from "react-bootstrap";
 
 import styled from "styled-components";
 import Select, { components } from "react-select";
 import { useDispatch, useSelector } from "react-redux";
-import {  filtarCurso, getCurso } from "../src/store/modules/curso/actions";
+import { filtarCurso, getCurso } from "../src/store/modules/curso/actions";
+import { ImageLoad } from "../hooks/ImageLoad";
 
 export const Container = styled.div`
   display: flex;
@@ -265,27 +266,27 @@ const IconOption = (props) => (
 );
 const InformacoesUnidadeCursos = () => {
   /* const [unidade, setUnidade] = useState(); */
- /*  const [dataBD, setDataBD] = useState("");
-  const [unidadeSelecionada, setUnidadeSelecionada] = useState(); */
+  /*  const [dataBD, setDataBD] = useState("");
+   const [unidadeSelecionada, setUnidadeSelecionada] = useState(); */
 
   const dispatch = useDispatch();
   const cursosInfo = useSelector((state) => state.curso.curso);
   const unidade = useSelector((state) => state.curso.unidade);
-  
+
   useEffect(() => {
-   /*  pergarUnidadeSelecionada({
-      label: "Todos os cursos",
-      value: "Todos os cursos",
-    }); */
+    /*  pergarUnidadeSelecionada({
+       label: "Todos os cursos",
+       value: "Todos os cursos",
+     }); */
 
   }, [dispatch]);
 
-  const pergarUnidadeSelecionada =  (unidadeSelecionada) => {
-   dispatch(filtarCurso(unidadeSelecionada.label))
+  const pergarUnidadeSelecionada = (unidadeSelecionada) => {
+    dispatch(filtarCurso(unidadeSelecionada.label))
   };
 
   const ValueContainer = ({ children, ...props }) => {
-    
+
     return (
       components.ValueContainer && (
         <components.ValueContainer {...props}>
@@ -369,14 +370,14 @@ const InformacoesUnidadeCursos = () => {
         </ConteudoCursos>
       </Container>
       <SuaVocacao>
-        <a href="https://uniftc.minhaescolha.com.br ">
-          <img src={'/imagens/sua_vocacao.svg'} className="sua_vocacao container" />
+        <a href="https://uniftc.minhaescolha.com.br " className="sua_vocacao container">
+          <ImageLoad tipo="banner" src={'/imagens/sua_vocacao.svg'}  />
         </a>
         <div>
           Ainda em dúvida de qual curso escolher? Faça nosso teste vocacional
         </div>
-        <a href="https://uniftc.minhaescolha.com.br ">
-          <img src={'/imagens/mob/sua_vocacao-mobile.svg'} className="sua_vocacao_mob" />
+        <a href="https://uniftc.minhaescolha.com.br " className="sua_vocacao_mob">
+          <ImageLoad tipo="banner" src={'/imagens/mob/sua_vocacao-mobile.svg'}  />
         </a>
       </SuaVocacao>
     </>

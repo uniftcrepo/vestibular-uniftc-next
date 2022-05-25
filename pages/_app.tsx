@@ -11,8 +11,14 @@ import React, { FC } from 'react'
 import type { AppProps } from 'next/app'
 import { NextPage } from 'next';
 import { wrapper }from '../src/store/next-store';
+import { ThemeProvider } from 'styled-components'
+import theme from '../styles/theme'
 const MyApp: NextPage<AppProps> =({ Component, pageProps }: AppProps) =>{
-  return <Component {...pageProps} />
+  return (
+  <ThemeProvider theme={theme}>
+    <Component {...pageProps} />
+  </ThemeProvider>
+  )
 }
 
 export default wrapper.withRedux(MyApp);

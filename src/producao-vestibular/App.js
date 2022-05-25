@@ -14,7 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = (props) => {
 
   useEffect(()=>{
-    document.title="Vestibular UNIFTC 2022.1 - Inscreva-se"
+    document.title="Vestibular UNIFTC 2022.2 - Inscreva-se"
   },[])
   return (
     <div className="App">

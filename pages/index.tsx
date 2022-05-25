@@ -17,14 +17,18 @@ import {
 } from "../src/store/modules/consultor/actions";
 import { END } from 'redux-saga';
 import { NextPage } from 'next';
+import Head from 'next/head';
 
 const Home: NextPage = (props) => {
 
   useEffect(() => {
-    document.title = "Vestibular UNIFTC 2022.1 - Inscreva-se"
+    document.title = "Vestibular UNIFTC 2022.2 - Inscreva-se"
   }, [])
   return (
     <div className="App">
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <Header />
       <Banner consultorId={undefined}/>
       <ButtoesFdi  consultorId={undefined}/>

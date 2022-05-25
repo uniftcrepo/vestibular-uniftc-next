@@ -6,16 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-/* import { getBannerView } from "../../store/modules/banner/actions";
-import {
-  filtroConsultor,
-  getCidades,
-} from "../../store/modules/consultor/actions"; */
+import { ImageLoad } from "../hooks/ImageLoad";
 
-import BackgroundConsultor from "../public/imagens/consultor_background.svg";
-/* import Consultor from "../utils/consultor"; */
 import ModalMatriculaBlackWeek from "./elementos/ModalMatriculaBlackWeek";
-import Skeleton from 'react-loading-skeleton'
 SwiperCore.use([Pagination, Navigation]);
 export const BannerDiv = styled.div`
   margin-top: 149px;
@@ -145,12 +138,12 @@ const Banner = ({ consultorId}) => {
     if (link !== "") {
       return consultorId === undefined ? (
         <a href={link} key={bannerTipo}>
-          <Image src={`${process.env.NEXT_PUBLIC_API}/banners_desktop/${bannerTipo}`} alt="" fluid />
+          <ImageLoad src={`${process.env.NEXT_PUBLIC_API}/banners_desktop/${bannerTipo}`} alt=""  tipo="banner"/>
         </a>
       ) : (
         <a href={link}>
           <div>
-            <Image src={'/imagens/consultor_background.svg'} alt="" style={{ width: "100%" }} />
+            <ImageLoad src={'/imagens/consultor_background.svg'} alt="" style={{ width: "100%" }} tipo="banner" />
             <div className="container">
               <Texto>
                 <ConsultorNome>{consultor.nomeConsultor}</ConsultorNome>
@@ -170,7 +163,7 @@ const Banner = ({ consultorId}) => {
       );
     } else {
       return consultorId === undefined ? (
-        <Image
+        <ImageLoad
           src={`${process.env.NEXT_PUBLIC_API}/banners_desktop/${bannerTipo}`}
           alt=""
           fluid
@@ -178,11 +171,12 @@ const Banner = ({ consultorId}) => {
           style={{
             cursor: modal ? "pointer" : "default",
           }}
+          tipo="banner"
           key={bannerTipo}
         />
       ) : (
         <div>
-          <Image src={'/imagens/consultor_background.svg'} alt="" style={{ width: "100%" }} />
+          <ImageLoad src={'/imagens/consultor_background.svg'} alt="" style={{ width: "100%" }} tipo="banner"/>
           <div className="container">
             <Texto>
               <ConsultorNome>{consultor.nomeConsultor}</ConsultorNome>
@@ -208,13 +202,14 @@ const Banner = ({ consultorId}) => {
  
   const consultor = useSelector((state) => state.consultor.consultorFiltro);
   /* const cidades = useSelector((state) => state.consultor.cidades); */
+ 
 
   useEffect(() => {
     setIsMobile(window.innerWidth <= 500);
- 
+    
   }, []);
+ 
   //#endregionconst [hasPosts, setPost] = useState(false);
-  const loading = useSelector((state) => state.fdi.loading);
 //console.table(bannerView)
   return (
     <>
@@ -223,7 +218,9 @@ const Banner = ({ consultorId}) => {
         onFecharModal={() => setShow(false)}
         size="xl"
       />
-     {loading ? (<div className="container"><Skeleton variant="rectangular" count={1} height={500} width={1200} /></div>): (<BannerDiv>
+     <div className="container" >
+        {/* {loading && <Skeleton variant="rectangular" count={1} height={500} width={1200} />} */}</div>
+        <BannerDiv>
         
         {consultorId === undefined ? ( <Swiper
           slidesPerView={1}
@@ -240,18 +237,18 @@ const Banner = ({ consultorId}) => {
               .slice()
               .sort((a, b) => a.ordem - b.ordem)
               .map((b, index) => (
-                  <React.Fragment key={Math.random()+index}>
+                  <React.Fragment key={index}>
                     {b.tipo === "desktop" && !isMobile && (
-                      <SwiperSlide key={Math.random()+index}>
-                        <div key={Math.random()+index} className="d-none d-lg-block d-sm-block d-print-block">
+                      <SwiperSlide key={index}>
+                        <div key={index} className="d-none d-lg-block d-sm-block d-print-block">
                           {banners(b.banner, b.link, consultor)  }
                         </div>
                       </SwiperSlide>
                     )}
 
                     {b.tipo === "mobile" && isMobile && (
-                      <SwiperSlide key={Math.random()+index}>
-                        <div key={Math.random()+index} className="d-block d-sm-none">
+                      <SwiperSlide key={index}>
+                        <div key={index} className="d-block d-sm-none">
                           {banners(b.banner, b.link, consultor)}
                         </div>
                       </SwiperSlide>
@@ -262,7 +259,7 @@ const Banner = ({ consultorId}) => {
         </Swiper>) :(
            
              <div>
-               <Image src={'/imagens/consultor_background.svg'} alt="" style={{ width: "100%" }} />
+               <ImageLoad src={'/imagens/consultor_background.svg'} alt="" style={{ width: "100%" }} />
                <div className="container">
                  <Texto>
                    <ConsultorNome>{consultor.nomeConsultor}</ConsultorNome>
@@ -280,7 +277,7 @@ const Banner = ({ consultorId}) => {
              </div>
         )}
        
-      </BannerDiv>)} 
+      </BannerDiv>
     </>  
   );
 };

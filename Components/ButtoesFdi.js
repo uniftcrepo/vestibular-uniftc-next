@@ -17,7 +17,7 @@ import parse from "html-react-parser";
 import { DATA } from "../src/producao-vestibular/utils/data";
 import Formulario from "./elementos/form";
 import { utms } from "../Components/functions/Utms";
-
+import { ImageLoad } from "../hooks/ImageLoad";
 import { useDispatch, useSelector } from "react-redux";
 import { getFdi, getFdiTextoLegal } from "../src/store/modules/fdi/actions";
 /* import { getFdi, getFdiTextoLegal } from "../../store/modules/fdi/actions";
@@ -1102,7 +1102,7 @@ const ButtoesFdi = ({consultorId}) => {
           </Direito5>
 
           <Direito5Mobile>
-            <img src={'/imagens/mob/bg-direito-mobile.png'} />
+            <ImageLoad src={'/imagens/mob/bg-direito-mobile.png'} tipo="banner"/>
             <div className="direito5-container">
             <div>INSCREVA-SE</div>
               <div>
