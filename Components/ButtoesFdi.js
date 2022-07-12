@@ -835,6 +835,22 @@ const ButtoesFdi = ({consultorId}) => {
                     onClick={() => QuadroSelecaoChange()}
                   />
                 </div>
+                <div>
+                  {" "}
+                  <Button
+                    cor="#DA1F7D"
+                    texto={"Corporativo - Direto 5.0"}
+                    tamanho={"330px"}
+
+                    link={`https://inscricao.uniftc.edu.br/Login/512`}
+                    target="_blank"
+                    /*  borderSolid={"2px solid #0093ff"} */
+                    colorTexto={"#fff"}
+                    fonteSize={"18px"}
+                    padding={"5px 20px 8px 20px"}
+                    onClick={() => QuadroSelecaoChange()}
+                  />
+                </div>
               </div>
             </QuadroSelecao>
           )}

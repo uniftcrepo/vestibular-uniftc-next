@@ -317,6 +317,8 @@ const InformacoesUnidadeCursos = () => {
       ...base,
       paddingLeft: 24,
     }),
+    menuPortal: provided => ({ ...provided, zIndex: 9999 }),
+    menu: provided => ({ ...provided, zIndex: 9999 })
   };
 
   return (
