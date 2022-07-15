@@ -18,7 +18,8 @@ import {
 import { END } from 'redux-saga';
 import { NextPage } from 'next';
 import Head from 'next/head';
-
+import Script from 'next/script'
+/* import Document, { Html, Main, NextScript } from 'next/document' */
 const Home: NextPage = (props) => {
 
   useEffect(() => {
@@ -28,10 +29,17 @@ const Home: NextPage = (props) => {
     <div className="App">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <Script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="2c4f05e0-8e56-444d-b47e-764fe164fd3d" ></Script>
+        <Script type="text/javascript">
+          {`
+          function OptanonWrapper() { }
+          `}
+        </Script>
+
       </Head>
       <Header />
-      <Banner consultorId={undefined}/>
-      <ButtoesFdi  consultorId={undefined}/>
+      <Banner consultorId={undefined} />
+      <ButtoesFdi consultorId={undefined} />
       <InformacoesUnidadeCursos />
       <Diferenciais />
       <Footer />
