@@ -29,7 +29,7 @@ const Home: NextPage = (props) => {
     <div className="App">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <Script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="2c4f05e0-8e56-444d-b47e-764fe164fd3d" ></Script>
+        <Script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript"  data-domain-script="2c4f05e0-8e56-444d-b47e-764fe164fd3d" ></Script>
         <Script type="text/javascript">
           {`
           function OptanonWrapper() { }
