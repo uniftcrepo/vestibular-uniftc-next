@@ -22,10 +22,17 @@ import api from "../src/services/api";
 
 const Consultor: NextPage = () => {
   const router = useRouter()
+  const {isFallback} = useRouter()
   const consultor = router.query.consultor
   useEffect(() => {
     document.title = "Vestibular UNIFTC 2022.2 - Inscreva-se"
   }, [])
+
+
+  if(isFallback){
+    return <p>Carregando...</p>
+  }
+
   return (
     <div className="App">
      {/*  <SSRProvider> */}
@@ -81,7 +88,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   })
   return {
     paths,
-    fallback: false
+    fallback: true
   };
 };
 
