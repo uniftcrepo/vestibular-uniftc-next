@@ -373,7 +373,7 @@ const Informacoes = ({ match, location }) => {
         ...formInscreva,
         ["utm_source"]: "lp_ps",
         ["utm_medium"]: midia,
-        ["utm_campaign"]: "vestibular_2021_2",
+        ["utm_campaign"]: "vestibular_2022_2",
         ["utm_content"]: conteudo,
       });
     }
