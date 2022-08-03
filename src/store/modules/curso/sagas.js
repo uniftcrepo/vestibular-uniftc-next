@@ -22,7 +22,6 @@ export function* getCursoSaga() {
     const {data} = yield api.get(
       "/getCidadeVestibular"
     );
-  
     yield put(successCurso(data));
   } catch (error) {
     //toast.error('Banner não foi excluido tente novamente')

@@ -9,9 +9,11 @@ import validarCpf from "validar-cpf";
 import { telMask } from "./../functions/MaskCelular";
 import api from "../../src/services/api";
 
-import swal from "sweetalert";
+/* import Swal from "sweetalert"; */
+import Swal from 'sweetalert2'
 import Consultor from "../../src/producao-vestibular/utils/consultor";
 import {  useSelector } from "react-redux";
+import { ConteudoCursosMobile } from "../InformacoesUnidadeCursos";
 
 export const MensagemErro = styled.div`
   color: #bd0f0f;
@@ -130,12 +132,12 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
   });
 
 
-
   const cursos = useSelector((state) => state.curso.todosOsCurso);
   const unidade = useSelector((state) => state.curso.unidade);
   const state = useSelector((state) => state);
   
-
+/*   console.log(cursos, unidade)
+ */
   useEffect(() => {
     /*  carregarUnidade(); */
     if(mensagemErroTelefone=="" &&  mensagemErroEmail=="" && mensagemErroCpf==""){
@@ -422,13 +424,13 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
     }
 
     if (data.data) {
-      swal("Rede UNIFTC", "Dê continuidade a sua inscrição!", "success");
+      Swal.fire("Rede UNIFTC", "Dê continuidade a sua inscrição!", "success");
       simulateNetworkRequest(2500).then(() => {
         setLoading(false);
         window.location.replace(redirecionamento);
       });
     } else {
-      /*  swal(
+      /*  Swal(
         "Rede UNIFTC",
         "Ocorreu um problema no servidor, tente novamente!",
         "error"

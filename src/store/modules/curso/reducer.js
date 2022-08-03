@@ -48,14 +48,13 @@ export default function curso(state = INITIAL_STATE, action) {
           acc[it.curso] = acc[it.curso] + 1 || 1;
           return acc;
       }, {}); */
-
         draft.todosOsCurso = action.payload.curso;
-
         draft.unidade = filtro(action.payload.curso)
           .map((cidade) => {
             return { label: cidade, value: cidade };
           }).filter((cidade) => {
-             if(state.nomeAba === "Vestibular Online" || state.nomeAba === "Use sua nota no ENEM" || state.nomeAba === "Segunda Graduação"){
+             if(state.nomeAba === "Vestibular Online" || state.nomeAba === "ENEM" || state.nomeAba === "Aproveitamento de Resultado"){
+             
               return cidade;
              }else{
               return (
@@ -80,7 +79,6 @@ export default function curso(state = INITIAL_STATE, action) {
       case "@curso/DIREITO5": {
        
         draft.nomeAba = action.payload.nomeAba;
-
         break;
       }
 

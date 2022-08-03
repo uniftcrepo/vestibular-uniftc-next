@@ -20,8 +20,9 @@ import { utms } from "../Components/functions/Utms";
 import { ImageLoad } from "../hooks/ImageLoad";
 import { useDispatch, useSelector } from "react-redux";
 import { getFdi, getFdiTextoLegal } from "../src/store/modules/fdi/actions";
+import {  direito5Curso, getCurso } from "../src/store/modules/curso/actions";
 /* import { getFdi, getFdiTextoLegal } from "../../store/modules/fdi/actions";
-import {  direito5Curso, getCurso } from "../../store/modules/curso/actions";
+
 import { getConsultor } from "../../store/modules/consultor/actions"; */
 /* import direito5 from "../public/imagens/direito-5.svg"; */
 /* import direito5Mobile from "../public/imagens/mob/direito-5-mobile.svg"; */
@@ -534,7 +535,7 @@ const ButtoesFdi = ({consultorId}) => {
   const [habilitarbutaoinscricao, setHabilitarbutaoinscricao] = useState(true);
   const [habilitarQuadro, setHabilitarQuadro] = useState(true);
   const [atualizacaoFdi, setAtualizacaoFdi] = useState(DATA.fdiatualizacao);
-  const [token, setToken] = useState();
+  const [token, setToken] = useState("ENEM");
   const [idx, setIdx] = useState([]);
   const [tipoUnidadeSelecionada, setTipoUnidadeSelecionada] = useState("");
   const [fdiDireito5, setFdiDireito5]= useState();
@@ -550,9 +551,8 @@ const ButtoesFdi = ({consultorId}) => {
 
 
   useEffect(() => {
-  /*   dispatch(direito5Curso(token));
-    dispatch(getCurso()); */
-    /* console.log() */
+    dispatch(direito5Curso(token));
+    dispatch(getCurso());
   }, [token]);
 
 
