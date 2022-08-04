@@ -33,17 +33,44 @@ export default function curso(state = INITIAL_STATE, action) {
         return nextState
       }
       case "@curso/SUCCESS": {
+        const todosCursos = action.payload.curso;
         const cursoAgrupados = action.payload.curso.reduce((obj, pet) => {
           if (!obj[pet.curso]) {
             obj[pet.curso] = 1;
           } else {
             obj[pet.curso]++;
           }
+         
           return obj;
         }, []);
-        draft.curso = Object.keys(cursoAgrupados).map((x, index) => {
+        const cursoAgrupadosUrlPortal = action.payload.curso.reduce((obj, pet) => {
+          if (!obj[pet.url_portal]) {
+            obj[pet.url_portal] = 1;
+          } else {
+            obj[pet.url_portal]++;
+          }
+         
+          return obj;
+        }, []);
+        const cursoParaFront =  Object.keys(cursoAgrupados).map((x, index) => {
           return { curso: x };
         });
+        const cursoParaFrontUrlPortal =  Object.keys(cursoAgrupadosUrlPortal).map((x, index) => {
+          return { url_portal: x };
+        });
+       /*  draft.curso = Object.keys(cursoAgrupados).map((x, index) => {
+          return { curso: x };
+        }); */
+        var final = [];
+            cursoParaFront.map((o,i) => {
+              final.push({curso: cursoParaFront[i].curso, url_portal:cursoParaFrontUrlPortal[i].url_portal})
+        })
+
+        draft.curso = final
+
+
+
+
         /*  let groupCursos = cursosSort.reduce((acc, it) => {
           acc[it.curso] = acc[it.curso] + 1 || 1;
           return acc;

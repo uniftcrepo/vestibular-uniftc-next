@@ -273,6 +273,8 @@ const InformacoesUnidadeCursos = () => {
   const cursosInfo = useSelector((state) => state.curso.curso);
   const unidade = useSelector((state) => state.curso.unidade);
 
+  
+
   useEffect(() => {
     /*  pergarUnidadeSelecionada({
        label: "Todos os cursos",
@@ -363,8 +365,9 @@ const InformacoesUnidadeCursos = () => {
             <Col lg={7} xs={12}>
               {cursosInfo &&
                 cursosInfo.map((x, index) => (
+                  
                   <ul key={index}>
-                    <li>{x.curso}</li>
+                    <li><a href={`https://www.uniftc.edu.br/graduacao/${x.url_portal}`}>{x.curso}</a> </li>
                   </ul>
                 ))}
             </Col>
