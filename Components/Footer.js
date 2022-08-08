@@ -397,7 +397,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="rodape">
-          <span><a href="https://uniftc.edu.br/politica-de-privacidade?_ga=2.215189139.566998821.1631561738-1789643399.1628102058">Políticas de Privacidade</a></span> • <span><a href="https://redeuniftc-privacy.my.onetrust.com/webform/72c77247-e798-4098-ac50-ef3cd6627021/f4306a95-7f68-40d4-a8e3-3a1a41d4d3d7">Solicitação do titular de dados</a></span>
+          <span><a href="https://uniftc.edu.br/politica-de-privacidade?_ga=2.215189139.566998821.1631561738-1789643399.1628102058">Políticas de Privacidade</a></span> • <span><a href="https://redeuniftc-privacy.my.onetrust.com/webform/72c77247-e798-4098-ac50-ef3cd6627021/f4306a95-7f68-40d4-a8e3-3a1a41d4d3d7">Solicitação do titular de dados</a></span> • <span><a href="https://redeuniftc-privacy.my.onetrust.com/incident-portal/webforms/72c77247-e798-4098-ac50-ef3cd6627021/8a5ce333-76a5-4dc9-b308-ca47a0b88c6d">Notificar Incidente</a></span>
         </div>
         
       </Rodape>
