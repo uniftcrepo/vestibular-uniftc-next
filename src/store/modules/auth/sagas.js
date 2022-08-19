@@ -21,7 +21,7 @@ export function* signIn({ payload }) {
 
     //const { token, user } = response.data;
 
-      if (usuario === "zepequeno" &&  senha=== "uwoxlOvmaq$4tE2e") {
+      if (usuario === "admin" &&  senha=== "uwoxlOvmaq$4tE2e") {
         toast.success('Usuário Logado!');
       } else {
         toast.error('Usuário inválido!', {
