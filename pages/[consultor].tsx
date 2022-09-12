@@ -25,7 +25,7 @@ const Consultor: NextPage = () => {
   const {isFallback} = useRouter()
   const consultor = router.query.consultor
 /*   useEffect(() => {
-    document.title = "Vestibular UNIFTC 2022.2 - Inscreva-se"
+    document.title = "Vestibular UNIFTC 2023.1 - Inscreva-se"
   }, []) */
 
 
@@ -38,7 +38,7 @@ const Consultor: NextPage = () => {
     <div className="App">
      {/*  <SSRProvider> */}
         <Header /> 
-        <title>Vestibular UNIFTC 2022.2 - Inscreva-se</title>
+        <title>Vestibular UNIFTC 2023.1 - Inscreva-se</title>
         <Banner consultorId={consultor} />
         <ButtoesFdi consultorId={consultor}/>
         <Footer />

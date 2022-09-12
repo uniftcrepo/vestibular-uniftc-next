@@ -26,7 +26,7 @@ const Home: NextPage = (props) => {
   return (
     <div className="App">
       <Head>
-      <title>Vestibular UNIFTC 2022.2 - Inscreva-se</title>
+      <title>Vestibular UNIFTC 2023.1 - Inscreva-se</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <Script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript"  data-domain-script="2c4f05e0-8e56-444d-b47e-764fe164fd3d" ></Script>
         <Script type="text/javascript">

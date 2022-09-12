@@ -535,7 +535,7 @@ const ButtoesFdi = ({consultorId}) => {
   const [habilitarbutaoinscricao, setHabilitarbutaoinscricao] = useState(true);
   const [habilitarQuadro, setHabilitarQuadro] = useState(true);
   const [atualizacaoFdi, setAtualizacaoFdi] = useState(DATA.fdiatualizacao);
-  const [token, setToken] = useState("ENEM");
+  const [token, setToken] = useState(0);
   const [idx, setIdx] = useState([]);
   const [tipoUnidadeSelecionada, setTipoUnidadeSelecionada] = useState("");
   const [fdiDireito5, setFdiDireito5]= useState();
@@ -863,11 +863,11 @@ const ButtoesFdi = ({consultorId}) => {
             >
               {" "}
               {fdiAbas &&
-                fdiAbas.map((x) => {
+                fdiAbas.map((x, i ) => {
                   return (
                     <Tab
                       key={Math.random()}
-                      eventKey={x.nome_da_aba}
+                      eventKey={i}
                       title={parse(x.nome_da_aba)}
                       tabClassName="tabs_forma_de_ingresso"
                     >

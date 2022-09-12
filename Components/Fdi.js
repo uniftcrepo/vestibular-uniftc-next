@@ -310,7 +310,7 @@ const Fdi = ({ match }) => {
       "&utm_content=" +
       hash.utm_content;
   }else{
-    utm ="?utm_source=lp_ps&utm_medium=acesso_direto&utm_campaign=vestibular_2022_2&utm_content=inscricao"
+    utm ="?utm_source=lp_ps&utm_medium=acesso_direto&utm_campaign=vestibular_2023.1&utm_content=inscricao"
   }
 
   const Botoes = ({ idinscricao, idzap, linkzap, concurso, prazo }) => {

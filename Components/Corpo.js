@@ -327,8 +327,8 @@ const Corpo = ({ match, location }) => {
          setFormInscreva({ ...formInscreva, ['utm_source']: hash.utm_source, ['utm_medium']: hash.utm_medium, ['utm_campaign']: hash.utm_campaign, ['utm_content']: hash.utm_content })
          setUtm("&utm_source=" + hash.utm_source + "&utm_medium=" + hash.utm_medium + "&utm_campaign=" + hash.utm_campaign + "&utm_content=" + hash.utm_content)
       } else {
-         setUtm("&utm_source=lp_ps&utm_medium=" + midia + "&utm_campaign=vestibular_2022_2&utm_content=" + conteudo)
-         setFormInscreva({ ...formInscreva, ['utm_source']: 'lp_ps', ['utm_medium']: midia, ['utm_campaign']: 'vestibular_2022_2', ['utm_content']: conteudo })
+         setUtm("&utm_source=lp_ps&utm_medium=" + midia + "&utm_campaign=vestibular_2023.1&utm_content=" + conteudo)
+         setFormInscreva({ ...formInscreva, ['utm_source']: 'lp_ps', ['utm_medium']: midia, ['utm_campaign']: 'vestibular_2023.1', ['utm_content']: conteudo })
       }
    }
    const handleChange = (event) => {
