@@ -12,7 +12,7 @@ import api from "../../src/services/api";
 /* import Swal from "sweetalert"; */
 import Swal from 'sweetalert2'
 import Consultor from "../../src/producao-vestibular/utils/consultor";
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { ConteudoCursosMobile } from "../InformacoesUnidadeCursos";
 
 export const MensagemErro = styled.div`
@@ -74,30 +74,30 @@ export const FormularioConsultor = styled.div`
 
 const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, consultorId }) => {
   const [validated, setValidated] = useState(false);
-/*   const [unidade, setUnidade] = useState();
-  const [curso, setCurso] = useState("");
-  const [turno, setTurno] = useState(""); */
+  /*   const [unidade, setUnidade] = useState();
+    const [curso, setCurso] = useState("");
+    const [turno, setTurno] = useState(""); */
   const [dataBD, setDataBD] = useState("");
-/*   const [fdi, setFdi] = useState("");
-  const [fdiFilterCompleto, setFdiFilterCompleto] = useState("");
-  const [idConcurso, setIdConcurso] = useState("");
-
-  const [unidadeSelecionada, setUnidadeSelecionada] = useState();
-  const [turnoSelecionado, setTurnoSelecionado] = useState({
-    label: "Turno...",
-    value: "0",
-  });
-  const [cursoSelecionado, setCursoSelecionado] = useState({
-    label: "Curso...",
-    value: "",
-  });
-  const [fdiSelecionado, setFdiSelecionado] = useState({
-    label: "Formas de ingresso...",
-    value: "",
-  });
-  const [disabledTurno, setDisabledTurno] = useState(true);
-  const [disabledCurso, setDisabledCurso] = useState(true);
-  const [disabledFdi, setDisabledFdi] = useState(true); */
+  /*   const [fdi, setFdi] = useState("");
+    const [fdiFilterCompleto, setFdiFilterCompleto] = useState("");
+    const [idConcurso, setIdConcurso] = useState("");
+  
+    const [unidadeSelecionada, setUnidadeSelecionada] = useState();
+    const [turnoSelecionado, setTurnoSelecionado] = useState({
+      label: "Turno...",
+      value: "0",
+    });
+    const [cursoSelecionado, setCursoSelecionado] = useState({
+      label: "Curso...",
+      value: "",
+    });
+    const [fdiSelecionado, setFdiSelecionado] = useState({
+      label: "Formas de ingresso...",
+      value: "",
+    });
+    const [disabledTurno, setDisabledTurno] = useState(true);
+    const [disabledCurso, setDisabledCurso] = useState(true);
+    const [disabledFdi, setDisabledFdi] = useState(true); */
 
   const [mensagemErroCpf, setMensagemErroCpf] = useState("");
   const [mensagemErroEmail, setMensagemErroEmail] = useState("");
@@ -108,17 +108,17 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
   const [groupCidades, setGroupCidades] = useState();
   const [groupCursos, setGroupCursos] = useState("");
   const [codConcurso, setcodConcurso] = useState(concurso);
- 
- /*  const [urlFdi, setUrlFdi] = useState();
-  const [tipo, setTipo] = useState(); */
+
+  /*  const [urlFdi, setUrlFdi] = useState();
+   const [tipo, setTipo] = useState(); */
   const [formInscreva, setFormInscreva] = useState({
     nome: "",
     cpf: "",
     telefone: "",
     email: "",
     unidade: "",
-    cod_curso:"",
-    curso: faculdade === "uniftc-medicina" ? "Medicina": "",
+    cod_curso: "",
+    curso: faculdade === "uniftc-medicina" ? "Medicina" : "",
     turno: "",
     fdi: "",
     utm_source: "",
@@ -135,82 +135,82 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
   const cursos = useSelector((state) => state.curso.todosOsCurso);
   const unidade = useSelector((state) => state.curso.unidade);
   const state = useSelector((state) => state);
-  
-/*   console.log(cursos, unidade)
- */
+
+  /*   console.log(cursos, unidade)
+   */
   useEffect(() => {
     /*  carregarUnidade(); */
-    if(mensagemErroTelefone=="" &&  mensagemErroEmail=="" && mensagemErroCpf==""){
+    if (mensagemErroTelefone == "" && mensagemErroEmail == "" && mensagemErroCpf == "") {
       setDisabledEnviar(false)
-    }else{
+    } else {
       setDisabledEnviar(true)
     }
-  
-  }, [mensagemErroTelefone, mensagemErroEmail, mensagemErroCpf ]);
+
+  }, [mensagemErroTelefone, mensagemErroEmail, mensagemErroCpf]);
   useEffect(() => {
     setTimeOutLoading();
   });
   useEffect(() => {
-     //Direito 5.0
-      /*  var data = DATA.cursosunidade;
+    //Direito 5.0
+    /*  var data = DATA.cursosunidade;
  
-       const arrayUrl = url.split("/");
-       setUrlFdi(arrayUrl[1]);
+     const arrayUrl = url.split("/");
+     setUrlFdi(arrayUrl[1]);
  
-       setDataBD(data);
+     setDataBD(data);
  
-       setUnidade(
-         data.map((val) => {
-           return { label: val.titulo, value: val.titulo };
-         })
-       ); */
-       const nomeCidade = [];
-       for (let obj of cursos) {
-         if (!nomeCidade.includes(obj.nome_cidade)) {
-           if(obj.id_cidade !== 12){
-             nomeCidade.push(obj.nome_cidade);
-           }
-         }
-       }
-    
-      setGroupCursos(cursos);
-      /* setGroupCidades(nomeCidade); */
-      if (consultorId !== undefined) {
-        var consultorAluno = consultorId.includes("aluno")
-          ? consultorId.replace("aluno", "")
-          : consultorId;
-  
-        if (consultor) {
-          const [arrayConsultor] = Consultor(consultor, consultorAluno);
-          
-          setFormInscreva({
-            ...formInscreva,
-            ["cod_consultor"]: arrayConsultor.codigoConsultor,
-            ["id_consultor"]: arrayConsultor.idConsultor,
-          });
-          //console.log(arrayConsultor.codigoConsultor,  arrayConsultor.idConsultor, formInscreva)
+     setUnidade(
+       data.map((val) => {
+         return { label: val.titulo, value: val.titulo };
+       })
+     ); */
+    const nomeCidade = [];
+    for (let obj of cursos) {
+      if (!nomeCidade.includes(obj.nome_cidade)) {
+        if (obj.id_cidade !== 12) {
+          nomeCidade.push(obj.nome_cidade);
         }
-      } else {
-        //console.log('Consultor não encontrado!')
+      }
+    }
+
+    setGroupCursos(cursos);
+    /* setGroupCidades(nomeCidade); */
+    if (consultorId !== undefined) {
+      var consultorAluno = consultorId.includes("aluno")
+        ? consultorId.replace("aluno", "")
+        : consultorId;
+
+      if (consultor) {
+        const [arrayConsultor] = Consultor(consultor, consultorAluno);
+
         setFormInscreva({
           ...formInscreva,
-          ["cod_consultor"]: null,
-          ["id_consultor"]: null,
+          ["cod_consultor"]: arrayConsultor.codigoConsultor,
+          ["id_consultor"]: arrayConsultor.idConsultor,
         });
+        //console.log(arrayConsultor.codigoConsultor,  arrayConsultor.idConsultor, formInscreva)
       }
+    } else {
+      //console.log('Consultor não encontrado!')
+      setFormInscreva({
+        ...formInscreva,
+        ["cod_consultor"]: null,
+        ["id_consultor"]: null,
+      });
+    }
   }, [cursos]);
 
   const pergarUnidadeSelecionada = async (unidadeSelecionada) => {
     setFormInscreva({ ...formInscreva, ["unidade"]: unidadeSelecionada.label });
-   /*  setCursoSelecionado(null);
-    setCurso(null);
-    setDisabledEnviar(true);
-    setTurnoSelecionado(null);
-    setFdiSelecionado(null);
-    setDisabledCurso(false);
-    setFdi(null);
-
-    setUnidadeSelecionada(unidadeSelecionada); */
+    /*  setCursoSelecionado(null);
+     setCurso(null);
+     setDisabledEnviar(true);
+     setTurnoSelecionado(null);
+     setFdiSelecionado(null);
+     setDisabledCurso(false);
+     setFdi(null);
+ 
+     setUnidadeSelecionada(unidadeSelecionada); */
     //filtrar
     let turnoFilter = dataBD.filter((val) => {
       return val.unidade === unidadeSelecionada.label;
@@ -245,7 +245,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
     });
     console.log(pegarCursoExato);
 
-   /*  setCurso(pegarCursoExato[0]); */
+    /*  setCurso(pegarCursoExato[0]); */
   };
 
 
@@ -310,20 +310,20 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       });
       setUtm(
         "&utm_source=" +
-          hash.utm_source +
-          "&utm_medium=" +
-          hash.utm_medium +
-          "&utm_campaign=" +
-          hash.utm_campaign +
-          "&utm_content=" +
-          hash.utm_content
+        hash.utm_source +
+        "&utm_medium=" +
+        hash.utm_medium +
+        "&utm_campaign=" +
+        hash.utm_campaign +
+        "&utm_content=" +
+        hash.utm_content
       );
     } else {
       setUtm(
         "&utm_source=lp_ps&utm_medium=" +
-          midia +
-          "&utm_campaign=vestibular_2023.1&utm_content=" +
-          conteudo
+        midia +
+        "&utm_campaign=vestibular_2023.1&utm_content=" +
+        conteudo
       );
       setFormInscreva({
         ...formInscreva,
@@ -345,30 +345,74 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
         }
       }
     }
-    
+
     if (event.target.name === "cod_curso") {
       const cod_curso = event.target.value;
-      const cidade = groupCursos.filter(x => x.cod_curso ===cod_curso)
+      const cidade = groupCursos.filter(x => x.cod_curso === cod_curso)
+     
       var cod_curso_direito5;
-     /*  if(cod_curso === "DIRCIC" || cidade[0].curso === "Direito" || cidade[0].curso === "Engenharia Civil" || cidade[0].curso === "Administração" || cidade[0].curso === "Sistemas de Informação" || cidade[0].curso === "Ciências Contábeis" || cidade[0].curso ==="Comunicação Social - Publicidade e Propaganda"){ */
-        if(cod_curso === "DIRCIC"){
-        if(nomeAba === "Vestibular Online"){
+      /*  if(cod_curso === "DIRCIC" || cidade[0].curso === "Direito" || cidade[0].curso === "Engenharia Civil" || cidade[0].curso === "Administração" || cidade[0].curso === "Sistemas de Informação" || cidade[0].curso === "Ciências Contábeis" || cidade[0].curso ==="Comunicação Social - Publicidade e Propaganda"){ */
+      if (cod_curso === "DIRCIC") {
+        if (nomeAba === "Vestibular Online") {
           setcodConcurso(486);
           cod_curso_direito5 = 486;
-        } 
-        if(nomeAba === "ENEM"){
+        }
+        if (nomeAba === "ENEM") {
           setcodConcurso(488);
           cod_curso_direito5 = 488;
         }
-        
-        if(nomeAba === "Aproveitamento de Resultado"){
+
+        if (nomeAba === "Aproveitamento de Resultado") {
           setcodConcurso(490);
           cod_curso_direito5 = 490;
         }
-      }else{
+      } else {
         setcodConcurso(concurso)
         cod_curso_direito5 = concurso;
       }
+
+      if(cidade[0].nome_cidade ==="Juazeiro" || cidade[0].nome_cidade ==="Petrolina"){
+        if (nomeAba === "Vestibular Online") {
+          setcodConcurso(553);
+          cod_curso_direito5 = 553;
+
+        if (nomeAba === "Aproveitamento de Resultado") {
+          setcodConcurso(554);
+          cod_curso_direito5 = 554;
+        }
+        }
+        if (nomeAba === "ENEM") {
+          setcodConcurso(555);
+          cod_curso_direito5 = 555;
+        }
+        if (nomeAba === "Segunda Graduação") {
+          setcodConcurso(556);
+          cod_curso_direito5 = 556;
+        }
+
+        if (nomeAba === "Prova em 25/09") {
+          setcodConcurso(557);
+          cod_curso_direito5 = 557;
+        }
+        if (nomeAba === "Transferência Externa") {
+          setcodConcurso(558);
+          cod_curso_direito5 = 558;
+        }
+
+        if (nomeAba === "Prova em 25/09") {
+          setcodConcurso(559);
+          cod_curso_direito5 = 559;
+        }
+
+      }
+
+      const teste ={
+        'unidade': cidade[0].nome_cidade,
+        'curso': cidade[0].curso,
+      }
+
+      console.log(teste)
+
       setFormInscreva({
         ...formInscreva,
         [event.target.name]: event.target.value,
@@ -378,7 +422,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       });
       return;
     }
-   
+
 
     if (event.target.name === "telefone") {
       event.target.value = telMask(event.target.value);
@@ -415,7 +459,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
     );
     var redirecionamento = "https://inscricao.uniftc.edu.br/login/";
 
-   
+
 
     if (codConcurso && formInscreva.cpf && utm) {
       var tag = "?cpf=" + formInscreva.cpf + utm;
@@ -460,26 +504,26 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
     ) {
       setMensagemErroEmail("");
       setDisabledEnviar(false);
-      async function validarEmail () {
-        const emailvalidacao =  await axios.post("https://www.uniftc.edu.br/slimapi/public/consultarEnemEmail",{
-        email: field
-      })
+      async function validarEmail() {
+        const emailvalidacao = await axios.post("https://www.uniftc.edu.br/slimapi/public/consultarEnemEmail", {
+          email: field
+        })
         var json = JSON.parse(emailvalidacao.data);
         console.log(json)
         return json;
 
       }
-      validarEmail().then(retorno =>{
-        if(retorno){
+      validarEmail().then(retorno => {
+        if (retorno) {
           setMensagemErroEmail("");
           setDisabledEnviar(false);
-        }else{
+        } else {
           //setFormInscreva({ ...formInscreva, ["email"]: " " });
           setMensagemErroEmail("Email inválido");
           setDisabledEnviar(true);
         }
       })
-     
+
 
     } else {
       setFormInscreva({ ...formInscreva, ["email"]: " " });
@@ -551,29 +595,29 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
     <FormularioConsultor>
       <div className="tituloForm">Inicie a sua inscrição</div>
       <Form noValidate validated={validated} onSubmit={submitForm}>
-      {faculdade !== "uniftc-medicina" && (
-        <Form.Group as={Col} xs={12} lg={12}>
-          <Form.Control
-            as="select"
-            className="my-1 mr-sm-2"
-            id="inlineFormCustomSelectPref"
-            onChange={handleChange}
-            name="cod_curso"
-            required
-            value={formInscreva.cod_curso}
-          >
-            <option value=''>Selecione o curso</option>
-            {unidade && unidade.map((cidade, idx)=>(
-              <optgroup key={idx} label={cidade.value}>
-              {cursos && cursos.filter(x =>
-                x.nome_cidade === cidade.value
-              ).map((value, key)=>(<option key={key} value={value.cod_curso}>{value.curso}</option>))}  
-             
-            </optgroup>
-             ))}
-          </Form.Control>
-        </Form.Group>
-      )}
+        {faculdade !== "uniftc-medicina" && (
+          <Form.Group as={Col} xs={12} lg={12}>
+            <Form.Control
+              as="select"
+              className="my-1 mr-sm-2"
+              id="inlineFormCustomSelectPref"
+              onChange={handleChange}
+              name="cod_curso"
+              required
+              value={formInscreva.cod_curso}
+            >
+              <option value=''>Selecione o curso</option>
+              {unidade && unidade.map((cidade, idx) => (
+                <optgroup key={idx} label={cidade.value}>
+                  {cursos && cursos.filter(x =>
+                    x.nome_cidade === cidade.value
+                  ).map((value, key) => (<option key={key} value={value.cod_curso}>{value.curso}</option>))}
+
+                </optgroup>
+              ))}
+            </Form.Control>
+          </Form.Group>
+        )}
         <Form.Group as={Col} xs={12} lg={12}>
           <Form.Control
             type="text"
@@ -636,7 +680,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
           </Form.Control.Feedback>
         </Form.Group>
 
-    
+
 
         <Form.Group as={Col} xs={12} lg={12}>
           <Button
@@ -659,7 +703,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
             componenteLink={false}
             link={"#"}
             fonteWeight={"500"}
-            onClick={() => {}}
+            onClick={() => { }}
             tamanhoMobile={"100%"}
           />
           <div className="ou">ou</div>
@@ -680,7 +724,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
           marginLeft={"unset"}
           marginTop={"unset"}
           link={"https://api.whatsapp.com/send?phone=5571988357245#"}
-          onClick={() => {}}
+          onClick={() => { }}
           fonteWeight={"500"}
           tamanhoMobile={"100%"}
         />
