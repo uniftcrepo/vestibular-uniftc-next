@@ -16,7 +16,7 @@ import theme from '../styles/theme'
 import TagManager from 'react-gtm-module';
 const MyApp: NextPage<AppProps> =({ Component, pageProps }: AppProps) =>{
   useEffect(() => {
-    TagManager.initialize({ gtmId: 'GTM-KDVBR6R' });
+    TagManager.initialize({ gtmId: 'GTM-T2LSVM2' });
 }, []);
   return (
   <ThemeProvider theme={theme}>
