@@ -390,7 +390,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
           cod_curso_direito5 = 556;
         }
 
-        if (nomeAba === "Prova em 25/09") {
+        if (nomeAba === "Prova 25/09") {
           setcodConcurso(557);
           cod_curso_direito5 = 557;
         }
@@ -399,7 +399,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
           cod_curso_direito5 = 558;
         }
 
-        if (nomeAba === "Prova em 25/09") {
+        if (nomeAba === "Reingresso") {
           setcodConcurso(559);
           cod_curso_direito5 = 559;
         }
@@ -471,7 +471,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       Swal.fire("Rede UNIFTC", "Dê continuidade a sua inscrição!", "success");
       simulateNetworkRequest(2500).then(() => {
         setLoading(false);
-        window.location.replace(redirecionamento);
+        //window.location.replace(redirecionamento);
       });
     } else {
       /*  Swal(
@@ -482,7 +482,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       simulateNetworkRequest(2500).then(() => {
         setLoading(false);
 
-        window.location.replace(redirecionamento);
+        //window.location.replace(redirecionamento);
       });
     }
   };
