@@ -410,8 +410,8 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
         'unidade': cidade[0].nome_cidade,
         'curso': cidade[0].curso,
       }
-
-      console.log(teste)
+/* 
+      console.log(teste) */
 
       setFormInscreva({
         ...formInscreva,
@@ -471,7 +471,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       Swal.fire("Rede UNIFTC", "Dê continuidade a sua inscrição!", "success");
       simulateNetworkRequest(2500).then(() => {
         setLoading(false);
-        //window.location.replace(redirecionamento);
+        window.location.replace(redirecionamento);
       });
     } else {
       /*  Swal(
@@ -482,7 +482,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       simulateNetworkRequest(2500).then(() => {
         setLoading(false);
 
-        //window.location.replace(redirecionamento);
+        window.location.replace(redirecionamento);
       });
     }
   };
