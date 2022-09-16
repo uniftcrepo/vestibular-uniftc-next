@@ -40,7 +40,7 @@ const Home: NextPage = (props) => {
       <Banner consultorId={undefined} />
       <ButtoesFdi consultorId={undefined} />
       <InformacoesUnidadeCursos />
-      <Diferenciais />
+     {/*  <Diferenciais /> */}
       <Footer />
     </div>
   );
