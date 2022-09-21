@@ -311,7 +311,7 @@ const Footer = () => {
                 <p>
                   <a
                     className="vestibular_uni"
-                    href="https://www.uniftc.edu.br/graduacao/edital-manual-e-regulamentos/"
+                    href="https://www.uniftc.edu.br/estude-na-uniftc/editais-manuais-e-regulamentos"
                   >
                     Editais e regulamentos
                   </a>

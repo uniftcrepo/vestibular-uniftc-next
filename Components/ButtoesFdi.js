@@ -1042,7 +1042,7 @@ const ButtoesFdi = ({consultorId}) => {
                                   <p>
                                     {parse(textoLegalSaga[0].texto_legal)}
                                     *Exceto medicina. Consulte{" "}
-                                    <a href="https://www.uniftc.edu.br/graduacao/edital-manual-e-regulamentos/?_ga=2.247517447.1011758842.1618231824-1226540173.1608305503">
+                                    <a href="https://www.uniftc.edu.br/estude-na-uniftc/editais-manuais-e-regulamentos?_ga=2.247517447.1011758842.1618231824-1226540173.1608305503">
                                       regulamento e condições
                                     </a>
                                   </p>

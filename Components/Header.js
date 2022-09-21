@@ -519,7 +519,7 @@ const loading = useSelector((state) => state.fdi.loading);
                 <div>
                   <a
                     target="_blank"
-                    href="https://www.uniftc.edu.br/graduacao/edital-manual-e-regulamentos/"
+                    href="https://www.uniftc.edu.br/estude-na-uniftc/editais-manuais-e-regulamentos"
                   >
                     Editais e regulamentos
                   </a>
