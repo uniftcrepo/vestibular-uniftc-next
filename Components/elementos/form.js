@@ -406,6 +406,38 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
 
       }
 
+      if(cidade[0].nome_cidade === "Feira de Santana"){
+        if (nomeAba === "Vestibular Online") {
+          setcodConcurso(531);
+          cod_curso_direito5 = 531;
+        }
+        if (nomeAba === "ENEM") {
+          setcodConcurso(532);
+          cod_curso_direito5 = 532;
+        }
+
+        if (nomeAba === "Aproveitamento de Resultado") {
+          setcodConcurso(533);
+          cod_curso_direito5 = 533;
+        }
+        if (nomeAba === "Transferência Externa") {
+          setcodConcurso(535);
+          cod_curso_direito5 = 535;
+        }
+        if (nomeAba === "Reingresso") {
+          setcodConcurso(536);
+          cod_curso_direito5 = 536;
+        }
+        if (nomeAba === "Segunda Graduação") {
+          setcodConcurso(534);
+          cod_curso_direito5 = 534;
+        }
+        if (nomeAba === "Prova 25/09") {
+          setcodConcurso(552);
+          cod_curso_direito5 = 552;
+        }
+     }
+
       const teste ={
         'unidade': cidade[0].nome_cidade,
         'curso': cidade[0].curso,
