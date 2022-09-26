@@ -391,8 +391,8 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
         }
 
         if (nomeAba === "Prova 25/09") {
-          setcodConcurso(557);
-          cod_curso_direito5 = 557;
+          setcodConcurso(564);
+          cod_curso_direito5 = 564;
         }
         if (nomeAba === "Transferência Externa") {
           setcodConcurso(558);
