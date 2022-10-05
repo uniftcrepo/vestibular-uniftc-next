@@ -138,7 +138,7 @@ const Banner = ({ consultorId}) => {
     if (link !== "") {
       return consultorId === undefined ? (
         <a href={link} key={bannerTipo}>
-          <ImageLoad src={`${process.env.NEXT_PUBLIC_API}/banners_desktop/${bannerTipo}`} alt=""  tipo="banner"/>
+          <ImageLoad src={`${process.env.NEXT_PUBLIC_API}banners_desktop/${bannerTipo}`} alt=""  tipo="banner"/>
         </a>
       ) : (
         <a href={link}>
@@ -205,9 +205,8 @@ const Banner = ({ consultorId}) => {
  
 
   useEffect(() => {
-    setIsMobile(window.innerWidth <= 500);
-    
-  }, []);
+    setIsMobile(window.innerWidth < 500);
+  }, [bannerView]);
  
   //#endregionconst [hasPosts, setPost] = useState(false);
 //console.table(bannerView)
@@ -245,7 +244,7 @@ const Banner = ({ consultorId}) => {
                         </div>
                       </SwiperSlide>
                     )}
-
+                    
                     {b.tipo === "mobile" && isMobile && (
                       <SwiperSlide key={index}>
                         <div key={index} className="d-block d-sm-none">
