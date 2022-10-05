@@ -7,6 +7,9 @@ import "swiper/swiper-bundle.min.css";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { ImageLoad } from "../hooks/ImageLoad";
+import {
+  useWindowWidth,
+} from '@react-hook/window-size'
 
 import ModalMatriculaBlackWeek from "./elementos/ModalMatriculaBlackWeek";
 SwiperCore.use([Pagination, Navigation]);
@@ -127,6 +130,7 @@ export const Avatar = styled.img`
 `;
 
 const Banner = ({ consultorId}) => {
+  const onlyWidth = useWindowWidth()
   const [show, setShow] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const handleClose = () => setShow(false);
@@ -203,10 +207,12 @@ const Banner = ({ consultorId}) => {
   const consultor = useSelector((state) => state.consultor.consultorFiltro);
   /* const cidades = useSelector((state) => state.consultor.cidades); */
  
-
+  
   useEffect(() => {
-    setIsMobile(window.innerWidth < 500);
-  }, [bannerView]);
+    if(window){
+      setIsMobile(onlyWidth < 768);
+    }
+  }, []);
  
   //#endregionconst [hasPosts, setPost] = useState(false);
 //console.table(bannerView)
