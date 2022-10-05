@@ -993,9 +993,15 @@ const ButtoesFdi = ({consultorId}) => {
                       >
                         {parse(x.nome_da_aba)}
                         {idx.includes(index) ? (
-                          <FontAwesomeIcon icon={faChevronUp} />
+                          <FontAwesomeIcon style={{
+                            width: "20px",
+                            height: "20px"
+                          }} icon={faChevronUp} />
                         ) : (
-                          <FontAwesomeIcon icon={faChevronDown} />
+                          <FontAwesomeIcon style={{
+                            width: "20px",
+                            height: "20px"
+                          }} icon={faChevronDown} />
                         )}
                       </Accordion.Toggle>
                       <Accordion.Collapse
