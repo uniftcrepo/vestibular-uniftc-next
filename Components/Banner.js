@@ -143,7 +143,7 @@ const Banner = ({ consultorId}) => {
       ) : (
         <a href={link}>
           <div>
-            <ImageLoad src={'/imagens/consultor_background.svg'} alt="" style={{ width: "100%" }} tipo="banner" />
+            <ImageLoad src={'/imagens/consultor_background.svg'} alt=""  tipo="banner" />
             <div className="container">
               <Texto>
                 <ConsultorNome>{consultor.nomeConsultor}</ConsultorNome>
@@ -176,7 +176,7 @@ const Banner = ({ consultorId}) => {
         />
       ) : (
         <div>
-          <ImageLoad src={'/imagens/consultor_background.svg'} alt="" style={{ width: "100%" }} tipo="banner"/>
+          <ImageLoad src={'/imagens/consultor_background.svg'} alt=""  tipo="banner"/>
           <div className="container">
             <Texto>
               <ConsultorNome>{consultor.nomeConsultor}</ConsultorNome>
@@ -259,7 +259,7 @@ const Banner = ({ consultorId}) => {
         </Swiper>) :(
            
              <div>
-               <ImageLoad src={'/imagens/consultor_background.svg'} alt="" style={{ width: "100%" }} />
+               <ImageLoad src={'/imagens/consultor_background.svg'} alt="" style={{ width: "100%" }} tipo="banner"/>
                <div className="container">
                  <Texto>
                    <ConsultorNome>{consultor.nomeConsultor}</ConsultorNome>
