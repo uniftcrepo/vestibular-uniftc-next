@@ -97,7 +97,10 @@ function Button({
       fonteSize={fonteSize}
       padding={padding}
       disabled={disabled}
-      /* onClick={() => nextPath(link)} */
+      onClick={() => {
+        nextPath(link)
+        onClick()
+       }}
       tipo={tipo}
       id={id}
       colorTexto={colorTexto}
@@ -106,7 +109,7 @@ function Button({
       marginLeft={marginLeft}
       boxShadow={boxShadow}
       marginBottom={marginBottom}
-      onClick={() => onClick()}
+      /* onClick={() => onClick()} */
       height={height} 
       marginTop={marginTop}
       fonteWeight={fonteWeight}
