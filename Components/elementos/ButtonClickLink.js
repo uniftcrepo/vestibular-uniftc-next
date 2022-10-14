@@ -98,8 +98,8 @@ function Button({
       padding={padding}
       disabled={disabled}
       onClick={() => {
-        nextPath(link)
-        onClick()
+        if(link){nextPath(link)}
+        if(!link){onClick()}
        }}
       tipo={tipo}
       id={id}
