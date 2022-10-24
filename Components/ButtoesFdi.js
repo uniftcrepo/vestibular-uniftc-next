@@ -634,7 +634,7 @@ const ButtoesFdi = ({consultorId}) => {
                 <Button
                   texto={"Confira o gabarito da prova"}
                   tamanho={"290px"}
-                  link={`https://www.uniftc.edu.br/slimapi/public/gabarito/${x.url_gabarito}`}
+                  link={`${process.env.NEXT_PUBLIC_API}/gabarito/${x.url_gabarito}`}
                   id={x.idinscricao}
                   target="_blank"
                   cor="#1C3661"
