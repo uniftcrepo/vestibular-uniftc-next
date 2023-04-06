@@ -500,7 +500,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
     }
 
     if (data.data) {
-      Swal.fire("Rede UNIFTC", "Sua inscrição foi iniciada. Entraremos em contato a partir do dia 10/04 para dar continuidade.", "success");
+      Swal.fire("Rede UNIFTC", "Sua inscrição foi iniciada. Entraremos em contato a partir do dia 13/04 para dar continuidade.", "success");
       simulateNetworkRequest(2500).then(() => {
         setLoading(false);
         //window.location.replace(redirecionamento);
