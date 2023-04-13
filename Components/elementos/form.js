@@ -500,10 +500,10 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
     }
 
     if (data.data) {
-      Swal.fire("Rede UNIFTC", "Sua inscrição foi iniciada. Entraremos em contato a partir do dia 13/04 para dar continuidade.", "success");
+      Swal.fire("Dê continuidade a sua inscrição!", "success");
       simulateNetworkRequest(2500).then(() => {
         setLoading(false);
-        //window.location.replace(redirecionamento);
+        window.location.replace(redirecionamento);
       });
     } else {
       /*  Swal(
@@ -514,7 +514,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       simulateNetworkRequest(2500).then(() => {
         setLoading(false);
 
-        //window.location.replace(redirecionamento);
+        window.location.replace(redirecionamento);
       });
     }
   };
