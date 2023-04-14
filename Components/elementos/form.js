@@ -489,7 +489,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       "/vestibular_online",
       { formInscreva } /* {config} */
     );
-    var redirecionamento = "https://inscricao.uniftc.edu.br/login/";
+    var redirecionamento = "https://inscricaoftcimes.crmeducacional.com/";
 
 
 
