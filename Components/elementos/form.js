@@ -128,7 +128,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
     cod_consultor: "",
     id_consultor: "",
     formulario_de_inscricao: "vestibular_consultor",
-    periodo_letivo: "2022.2",
+    periodo_letivo: "2023.2",
   });
 
 
@@ -346,13 +346,12 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       }
     }
 
-    if (event.target.name === "cod_curso") {
+   /*  if (event.target.name === "cod_curso") {
       const cod_curso = event.target.value;
       const cidade = groupCursos.filter(x => x.cod_curso === cod_curso)
      
       var cod_curso_direito5;
-      /*  if(cod_curso === "DIRCIC" || cidade[0].curso === "Direito" || cidade[0].curso === "Engenharia Civil" || cidade[0].curso === "Administração" || cidade[0].curso === "Sistemas de Informação" || cidade[0].curso === "Ciências Contábeis" || cidade[0].curso ==="Comunicação Social - Publicidade e Propaganda"){ */
-      if (cod_curso === "DIRCIC") {
+    
         if (nomeAba === "Vestibular Online") {
           setcodConcurso(486);
           cod_curso_direito5 = 486;
@@ -369,8 +368,8 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       } else {
         setcodConcurso(concurso)
         cod_curso_direito5 = concurso;
-      }
-
+      } */
+/* 
       if(cidade[0].nome_cidade ==="Juazeiro" || cidade[0].nome_cidade ==="Petrolina"){
         if (nomeAba === "Vestibular Online") {
           setcodConcurso(553);
@@ -441,11 +440,11 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       const teste ={
         'unidade': cidade[0].nome_cidade,
         'curso': cidade[0].curso,
-      }
+      } */
 /* 
       console.log(teste) */
 
-      setFormInscreva({
+    /*   setFormInscreva({
         ...formInscreva,
         [event.target.name]: event.target.value,
         'unidade': cidade[0].nome_cidade,
@@ -453,7 +452,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
         "fdi": cod_curso_direito5 || codConcurso
       });
       return;
-    }
+    } */
 
 
     if (event.target.name === "telefone") {
