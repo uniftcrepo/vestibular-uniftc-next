@@ -1067,7 +1067,7 @@ const ButtoesFdi = ({consultorId}) => {
 
         {tipoUnidadeSelecionada !== "uniftc-medicina" ? (
           <>
-          <Direito5>
+        {/*   <Direito5>
             <img src={'/imagens/bg-direito-desktop.png'} />
             <div className="direito5-container">
               <div>INSCREVA-SE</div>
@@ -1098,8 +1098,6 @@ const ButtoesFdi = ({consultorId}) => {
                   padding={"4px 20px 6px 20px"}
                   texto={"Avançar"}
                   marginLeft={"15px"}
-                  /*   tamanho={tamanho}
-              id={idinscricao} */
                   borderSolid={"2px solid #0093ff"}
                   disabled={!fdiDireito5}
                   link={
@@ -1156,8 +1154,6 @@ const ButtoesFdi = ({consultorId}) => {
                   paddingMobile={"5px 20px 20px 20px"}
                   texto={"Avançar"}
                   fonteWeight={500}
-                  /*   tamanho={tamanho}
-              id={idinscricao} */
                   disabled={!fdiDireito5}
                   borderSolid={"2px solid #0093ff"}
                   marginBottom={"5px"}
@@ -1181,7 +1177,7 @@ const ButtoesFdi = ({consultorId}) => {
                 </div>
               </div>
             </div>
-          </Direito5Mobile>
+          </Direito5Mobile> */}
         </>
         ) : (
           <>
