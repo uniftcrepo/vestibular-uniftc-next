@@ -443,16 +443,18 @@ sudo       if(cidade[0].nome_cidade === "Feira de Santana"){
       } */
 /* 
       console.log(teste) */
-
-    /*   setFormInscreva({
+     if (event.target.name === "cod_curso") {
+        const cod_curso = event.target.value;
+        const cidade = groupCursos.filter(x => x.cod_curso === cod_curso)
+      setFormInscreva({
         ...formInscreva,
         [event.target.name]: event.target.value,
         'unidade': cidade[0].nome_cidade,
         'curso': cidade[0].curso,
-        "fdi": cod_curso_direito5 || codConcurso
+        "fdi":  codConcurso
       });
       return;
-    } */
+    }
 
 
     if (event.target.name === "telefone") {
