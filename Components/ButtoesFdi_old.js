@@ -297,7 +297,7 @@ const ButtoesFdi = ({ match, location }) => {
       hash.utm_content;
   } else {
     utm =
-      "?utm_source=lp_ps&utm_medium=acesso_direto&utm_campaign=vestibular_2023.1&utm_content=inscricao";
+      "?utm_source=lp_ps&utm_medium=acesso_direto&utm_campaign=vestibular_2023.2&utm_content=inscricao";
   }
 
   const Botoes = ({

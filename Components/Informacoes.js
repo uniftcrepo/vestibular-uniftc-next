@@ -366,14 +366,14 @@ const Informacoes = ({ match, location }) => {
       setUtm(
         "&utm_source=lp_ps&utm_medium=" +
           midia +
-          "&utm_campaign=vestibular_2023.1&utm_content=" +
+          "&utm_campaign=vestibular_2023.2&utm_content=" +
           conteudo
       );
       setFormInscreva({
         ...formInscreva,
         ["utm_source"]: "lp_ps",
         ["utm_medium"]: midia,
-        ["utm_campaign"]: "vestibular_2023.1",
+        ["utm_campaign"]: "vestibular_2023.2",
         ["utm_content"]: conteudo,
       });
     }
