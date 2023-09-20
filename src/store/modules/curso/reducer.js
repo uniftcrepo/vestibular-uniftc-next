@@ -85,6 +85,8 @@ export default function curso(state = INITIAL_STATE, action) {
               return cidade;
              }else{
               return (
+                cidade.value !== "Feira de Santana" &&
+                cidade.value !== "Itabuna" &&
                 cidade.value !== "Camaçari" &&
                 cidade.value !== "Nossa Senhora do Socorro" &&
                 cidade.value !== "Caucaia" &&

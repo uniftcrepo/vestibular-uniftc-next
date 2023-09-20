@@ -128,7 +128,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
     cod_consultor: "",
     id_consultor: "",
     formulario_de_inscricao: "vestibular_consultor",
-    periodo_letivo: "2023.2",
+    periodo_letivo: "2024.1",
   });
 
 
