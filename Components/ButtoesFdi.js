@@ -583,10 +583,9 @@ const ButtoesFdi = ({consultorId}) => {
 
   const QuadroSelecaoChange = (tipoUnidade) => {
     setHabilitarQuadro(false);
-    if (tipoUnidade === "uniftc-medicina") {
-      setTipoUnidadeSelecionada(tipoUnidade);
-      dispatch(getFdi({ faculdade: "uniftc-medicina" }));
-    }
+    setTipoUnidadeSelecionada(tipoUnidade);
+    dispatch(getFdi({ faculdade: tipoUnidade }));
+   
   };
 
   useEffect(() => {
@@ -815,7 +814,7 @@ const ButtoesFdi = ({consultorId}) => {
                     colorTexto={"#fff"}
                     fonteSize={"18px"}
                     padding={"5px 20px 8px 20px"}
-                    onClick={() => QuadroSelecaoChange("uniftc-medicina")}
+                    onClick={() => QuadroSelecaoChange("unex-medicina")}
                   />
                 </div>
                 <div>
@@ -832,11 +831,10 @@ const ButtoesFdi = ({consultorId}) => {
                     colorTexto={"#fff"}
                     fonteSize={"18px"}
                     padding={"5px 20px 8px 20px"}
-                    onClick={() => QuadroSelecaoChange()}
+                    onClick={() => QuadroSelecaoChange("uniftc")}
                   />
                 </div>
-                <div>
-                  {" "}
+               {/*  <div>
                   <Button
                     cor="#DA1F7D"
                     texto={"Corporativo - Direto 5.0"}
@@ -844,13 +842,13 @@ const ButtoesFdi = ({consultorId}) => {
 
                     link={`https://inscricao.uniftc.edu.br/Login/512`}
                     target="_blank"
-                    /*  borderSolid={"2px solid #0093ff"} */
+                     borderSolid={"2px solid #0093ff"}
                     colorTexto={"#fff"}
                     fonteSize={"18px"}
                     padding={"5px 20px 8px 20px"}
                     onClick={() => QuadroSelecaoChange()}
                   />
-                </div>
+                </div> */}
               </div>
             </QuadroSelecao>
           )}
@@ -906,7 +904,7 @@ const ButtoesFdi = ({consultorId}) => {
                           <div className="texto_legal">
                             {" "}
                             {textoLegalSaga.length > 0 &&
-                              x.faculdade !== "uniftc-medicina" && (
+                              x.faculdade !== "unex-medicina" && (
                                 <>
                                   <p>
                                     {parse(textoLegalSaga[0].texto_legal)}
@@ -951,7 +949,7 @@ const ButtoesFdi = ({consultorId}) => {
                     fonteSize={"18px"}
                     padding={"8px 20px 8px 20px"}
                     paddingMobile={"9px 20px 8px 20px"}
-                    onClick={() => QuadroSelecaoChange("uniftc-medicina")}
+                    onClick={() => QuadroSelecaoChange("unex-medicina")}
                   />
                 </div>
                 <div>
@@ -969,7 +967,7 @@ const ButtoesFdi = ({consultorId}) => {
                     fonteSize={"18px"}
                     padding={"8px 20px 8px 20px"}
                     paddingMobile={"9px 20px 8px 20px"}
-                    onClick={() => QuadroSelecaoChange()}
+                    onClick={() => QuadroSelecaoChange("uniftc")}
                   />
                 </div>
               </div>
@@ -1043,7 +1041,7 @@ const ButtoesFdi = ({consultorId}) => {
                           <div className="texto_legal">
                             {" "}
                             {textoLegalSaga.length > 0 &&
-                              x.faculdade !== "uniftc-medicina" && (
+                              x.faculdade !== "unex-medicina" && (
                                 <>
                                   <p>
                                     {parse(textoLegalSaga[0].texto_legal)}
@@ -1065,7 +1063,7 @@ const ButtoesFdi = ({consultorId}) => {
         </DivBotaoMobile>
         {/* {consultorId === undefined && ( */}
 
-        {tipoUnidadeSelecionada !== "uniftc-medicina" ? (
+        {tipoUnidadeSelecionada !== "unex-medicina" ? (
           <>
         {/*   <Direito5>
             <img src={'/imagens/bg-direito-desktop.png'} />

@@ -118,7 +118,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
     email: "",
     unidade: "",
     cod_curso: "",
-    curso: faculdade === "uniftc-medicina" ? "Medicina" : "",
+    curso: faculdade === "unex-medicina" ? "Medicina" : "",
     turno: "",
     fdi: "",
     utm_source: "",
@@ -322,14 +322,14 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       setUtm(
         "&utm_source=lp_ps&utm_medium=" +
         midia +
-        "&utm_campaign=vestibular_2023.2&utm_content=" +
+        "&utm_campaign=vestibular_2024.1&utm_content=" +
         conteudo
       );
       setFormInscreva({
         ...formInscreva,
         ["utm_source"]: "lp_ps",
         ["utm_medium"]: midia,
-        ["utm_campaign"]: "vestibular_2023.2",
+        ["utm_campaign"]: "vestibular_2024.1",
         ["utm_content"]: conteudo,
       });
     }
@@ -628,7 +628,7 @@ sudo       if(cidade[0].nome_cidade === "Feira de Santana"){
     <FormularioConsultor>
       <div className="tituloForm">Inicie a sua inscrição</div>
       <Form noValidate validated={validated} onSubmit={submitForm}>
-        {faculdade !== "uniftc-medicina" && (
+        {faculdade !== "unex-medicina" && (
           <Form.Group as={Col} xs={12} lg={12}>
             <Form.Control
               as="select"
