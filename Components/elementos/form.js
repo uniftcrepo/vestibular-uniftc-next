@@ -490,7 +490,7 @@ sudo       if(cidade[0].nome_cidade === "Feira de Santana"){
       "/vestibular_online",
       { formInscreva } /* {config} */
     );
-    var redirecionamento = "https://inscricaoftcimes.crmeducacional.com/Login/";
+    var redirecionamento = "https://inscricao.uniftc.edu.br/Login/";
 
 
 

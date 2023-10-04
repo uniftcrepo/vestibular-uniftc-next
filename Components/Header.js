@@ -443,7 +443,7 @@ const loading = useSelector((state) => state.fdi.loading);
                     return (
                       <Dropdown.Item
                         key={x.posicao}
-                        href={`https://inscricaoftcimes.crmeducacional.com/Login/${x.concurso}${utms()}`}
+                        href={`https://inscricao.uniftc.edu.br/Login/${x.concurso}${utms()}`}
                         eventKey={x.posicao}
                         className="acompanhar-inscricao"
                       >
