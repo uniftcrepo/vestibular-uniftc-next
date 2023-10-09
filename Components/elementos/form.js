@@ -8,6 +8,7 @@ import { cpfMask } from "./../functions/MaskCpf";
 import validarCpf from "validar-cpf";
 import { telMask } from "./../functions/MaskCelular";
 import api from "../../src/services/api";
+import { useRouter } from 'next/router';
 
 /* import Swal from "sweetalert"; */
 import Swal from 'sweetalert2'
@@ -73,6 +74,7 @@ export const FormularioConsultor = styled.div`
 `;
 
 const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, consultorId }) => {
+  const router = useRouter();
   const [validated, setValidated] = useState(false);
   /*   const [unidade, setUnidade] = useState();
     const [curso, setCurso] = useState("");
@@ -490,14 +492,16 @@ sudo       if(cidade[0].nome_cidade === "Feira de Santana"){
       "/vestibular_online",
       { formInscreva } /* {config} */
     );
-    var redirecionamento = "https://inscricao.uniftc.edu.br/Login/";
+    var redirecionamento = router.query.op ? "https://www.uniftc.edu.br/teste/": "https://inscricao.uniftc.edu.br/login/";
+    
+   
 
 
 
     if (codConcurso && formInscreva.cpf && utm) {
       var tag = "?cpf=" + formInscreva.cpf + utm;
 
-      redirecionamento = redirecionamento + codConcurso + tag;
+      redirecionamento =  router.query.op ? redirecionamento + tag: redirecionamento + codConcurso + tag;
     }
 
     if (data.data) {
