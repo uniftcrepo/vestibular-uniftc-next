@@ -27,7 +27,7 @@ if (hash.utm_source !== undefined) {
     hash.utm_content;
 } else {
   utm =
-    "?utm_source=lp_ps&utm_medium=acesso_direto&utm_campaign=vestibular_2023.2&utm_content=inscricao";
+    "?utm_source=lp_ps&utm_medium=acesso_direto&utm_campaign=vestibular_2024.1&utm_content=inscricao";
 }
 return utm;
 }
