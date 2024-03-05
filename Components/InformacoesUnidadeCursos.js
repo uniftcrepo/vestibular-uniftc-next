@@ -375,13 +375,13 @@ const InformacoesUnidadeCursos = () => {
         </ConteudoCursos>
       </Container>
       <SuaVocacao>
-        <a href="https://uniftc.minhaescolha.com.br " className="sua_vocacao container">
+        <a href="https://admission.worka.love/chat/uniftc?utm_source=site&utm_content=Banner+rotativo+na+p%C3%A1gina+home&link_identification=8015&utm_medium=organico " className="sua_vocacao container">
           <ImageLoad tipo="banner" src={'/imagens/sua_vocacao.png'}  />
         </a>
         <div>
           Ainda em dúvida de qual curso escolher? Faça nosso teste vocacional
         </div>
-        <a href="https://uniftc.minhaescolha.com.br " className="sua_vocacao_mob">
+        <a href="https://admission.worka.love/chat/uniftc?utm_source=site&utm_content=Banner+rotativo+na+p%C3%A1gina+home&link_identification=8015&utm_medium=organico " className="sua_vocacao_mob">
           <ImageLoad tipo="banner" src={'/imagens/mob/sua_vocacao-mobile.png'}  />
         </a>
       </SuaVocacao>
