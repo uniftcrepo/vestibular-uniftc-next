@@ -526,7 +526,12 @@ const loading = useSelector((state) => state.fdi.loading);
                 </div>
                 <hr />
                 <div className="GruposImgContatos">
+                <a
+              href="https://api.whatsapp.com/send?phone=5508000566666&text=Ol%C3%A1,%20UNIFTC"
+              className="vest-iniciar-conversa"
+            >
                   <img src={'/imagens/Menu_Fale_pelo_Whatsapp.svg'} />
+                 </a> 
                   <img src={'/imagens/Menu_contatos.svg'} />
                 </div>
                 <div className="MenuFechar">
