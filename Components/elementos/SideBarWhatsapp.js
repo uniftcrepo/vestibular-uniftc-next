@@ -95,7 +95,7 @@ function SideBarWhatsapp({ onAbreSideBarWhatsapp, fecharPainel }) {
           <Title>Entre em contato conosco</Title>
 
           <ContentContato>
-            <a href="https://wa.me/5571988357245" target="_blank">
+            <a href="https://wa.me/5508000566666" target="_blank">
               <img src={ImgWhatsapp} />
             </a>
             <a

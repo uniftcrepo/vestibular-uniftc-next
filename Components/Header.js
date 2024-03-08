@@ -421,7 +421,7 @@ const loading = useSelector((state) => state.fdi.loading);
           <LogoTop>
           <img src={'/imagens/logo_top.svg'} className="img-responsive"  />
             <a
-              href="https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1,%20UNIFTC"
+              href="https://api.whatsapp.com/send?phone=5508000566666&text=Ol%C3%A1,%20UNIFTC"
               className="vest-iniciar-conversa"
             >
               <Whatsapp />

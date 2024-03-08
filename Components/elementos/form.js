@@ -768,7 +768,7 @@ sudo       if(cidade[0].nome_cidade === "Feira de Santana"){
           heightMobile={"37px"}
           marginLeft={"unset"}
           marginTop={"unset"}
-          link={"https://api.whatsapp.com/send?phone=5571988357245#"}
+          link={"https://api.whatsapp.com/send?phone=5508000566666#"}
           onClick={() => { }}
           fonteWeight={"500"}
           tamanhoMobile={"100%"}

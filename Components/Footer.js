@@ -272,7 +272,7 @@ const Footer = () => {
                 <img src={'/imagens/logo_rodape.svg'} />
               </div>
               <div className="footer-contato">
-                <a href="https://api.whatsapp.com/send?phone=5571988357245&amp;text=Ol%C3%A1,%20UNIFTC">
+                <a href="https://api.whatsapp.com/send?phone=5508000566666&amp;text=Ol%C3%A1,%20UNIFTC">
                   <img src={'/imagens/rodape_whatsapp.svg'} className="" />
                 </a>
                 <a
@@ -386,7 +386,7 @@ const Footer = () => {
             <div className="atendimento">
               <div className="atendimento-title">Atendimento</div>
               <div className="atendimento-whatsapp">
-                <a href="https://api.whatsapp.com/send?phone=5571988357245&amp;text=Ol%C3%A1,%20UNIFTC">
+                <a href="https://api.whatsapp.com/send?phone=5508000566666&amp;text=Ol%C3%A1,%20UNIFTC">
                   <Whatsapp />
                 </a>
               </div>

@@ -740,7 +740,7 @@ export const DATA = {
       demaissemestres: "com bolsa de 55% até o final do curso*",
       idinscricao: "online",
       linkzap:
-        "https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1%20UniFTC!%20Quero%20me%20inscrever%20no%20Vestibular%20Online%20",
+        "https://api.whatsapp.com/send?phone=5508000566666&text=Ol%C3%A1%20UniFTC!%20Quero%20me%20inscrever%20no%20Vestibular%20Online%20",
     },
     {
       concurso: "339",
@@ -757,7 +757,7 @@ export const DATA = {
       demaissemestres: "com bolsa de 55% até o final do curso*",
       idinscricao: "aproveitamento",
       linkzap:
-        "https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1!%20Quero%20utilizar%20minha%20aprova%C3%A7%C3%A3o%20de%20outro%20vestibular%20da%20UniFTC.",
+        "https://api.whatsapp.com/send?phone=5508000566666&text=Ol%C3%A1!%20Quero%20utilizar%20minha%20aprova%C3%A7%C3%A3o%20de%20outro%20vestibular%20da%20UniFTC.",
     },
     /*  {
       concurso: "349",
@@ -771,7 +771,7 @@ export const DATA = {
       primeirosemestre: "com bolsa de 70%*",
       demaissemestres: "com bolsa de 55% até o final do curso*",
       idinscricao: "aproveitamento",
-      linkzap:"https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1!%20Quero%20utilizar%20minha%20aprova%C3%A7%C3%A3o%20de%20outro%20vestibular%20da%20UniFTC."
+      linkzap:"https://api.whatsapp.com/send?phone=5508000566666&text=Ol%C3%A1!%20Quero%20utilizar%20minha%20aprova%C3%A7%C3%A3o%20de%20outro%20vestibular%20da%20UniFTC."
     }, */
     {
       concurso: "341",
@@ -788,7 +788,7 @@ export const DATA = {
       demaissemestres: "com bolsa de 55% até o final do curso*",
       idinscricao: "enem",
       linkzap:
-        "https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1%20UniFTC!%20Quero%20me%20inscrever%20usando%20a%20nota%20do%20ENEM",
+        "https://api.whatsapp.com/send?phone=5508000566666&text=Ol%C3%A1%20UniFTC!%20Quero%20me%20inscrever%20usando%20a%20nota%20do%20ENEM",
     },
     {
       concurso: "345",
@@ -805,7 +805,7 @@ export const DATA = {
       demaissemestres: "com bolsa de 65% até o final do curso*",
       idinscricao: "sg",
       linkzap:
-        "https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1%20UniFTC!%20Quero%20fazer%20uma%20Segunda%20Gradua%C3%A7%C3%A3o",
+        "https://api.whatsapp.com/send?phone=5508000566666&text=Ol%C3%A1%20UniFTC!%20Quero%20fazer%20uma%20Segunda%20Gradua%C3%A7%C3%A3o",
     },
     {
       concurso: "343",
@@ -822,7 +822,7 @@ export const DATA = {
       demaissemestres: "com bolsa de 65% até o final do curso*",
       idinscricao: "te",
       linkzap:
-        "https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1!%20Quero%20transferir%20meu%20curso%20para%20UniFTC.",
+        "https://api.whatsapp.com/send?phone=5508000566666&text=Ol%C3%A1!%20Quero%20transferir%20meu%20curso%20para%20UniFTC.",
       descontoespecial:
         "Descontos Especiais para Transferências em Grupo. Consulte nossos Consultores pelo Whatsapp",
     },
@@ -841,7 +841,7 @@ export const DATA = {
       demaissemestres: "com bolsa de 55% até o final do curso*",
       idinscricao: "reingresso",
       linkzap:
-        "https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1!%20Quero%20voltar%20a%20estudar%20na%20UniFTC.",
+        "https://api.whatsapp.com/send?phone=5508000566666&text=Ol%C3%A1!%20Quero%20voltar%20a%20estudar%20na%20UniFTC.",
       descontoespecial:
         "Esse processo seletivo é destinado a Alunos da UNIFTC que evadiram até 2020.1 e desejam retornar seus estudos",
     },
@@ -860,7 +860,7 @@ export const DATA = {
       demaissemestres: "com bolsa de 55% até o final do curso*",
       idinscricao: "aproveitamento",
       linkzap:
-        "https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1!%20Quero%20utilizar%20minha%20aprova%C3%A7%C3%A3o%20de%20outro%20vestibular%20da%20UniFTC.",
+        "https://api.whatsapp.com/send?phone=5508000566666&text=Ol%C3%A1!%20Quero%20utilizar%20minha%20aprova%C3%A7%C3%A3o%20de%20outro%20vestibular%20da%20UniFTC.",
     },
   ],
 
@@ -878,7 +878,7 @@ export const DATA = {
       posicao: "first",
       idinscricao: "online",
       linkzap:
-      "https://api.whatsapp.com/send?phone=5571988357245&text=",
+      "https://api.whatsapp.com/send?phone=5508000566666&text=",
     },
    
     
@@ -895,7 +895,7 @@ export const DATA = {
       posicao: "second",
       idinscricao: "enem",
       linkzap:
-      "https://api.whatsapp.com/send?phone=5571988357245&text=",
+      "https://api.whatsapp.com/send?phone=5508000566666&text=",
     },
 
     {
@@ -911,7 +911,7 @@ export const DATA = {
       posicao: "sixth",
       idinscricao: "te",
       linkzap:
-      "https://api.whatsapp.com/send?phone=5571988357245&text=",
+      "https://api.whatsapp.com/send?phone=5508000566666&text=",
     },
     {
       id: "4",
@@ -926,7 +926,7 @@ export const DATA = {
       posicao: "thrid",
       idinscricao: "sg",
       linkzap:
-        "https://api.whatsapp.com/send?phone=5571988357245&text=",
+        "https://api.whatsapp.com/send?phone=5508000566666&text=",
     },
    
    
@@ -943,7 +943,7 @@ export const DATA = {
       posicao: "fifth",
       idinscricao: "reingresso",
       linkzap:
-      "https://api.whatsapp.com/send?phone=5571988357245&text=",
+      "https://api.whatsapp.com/send?phone=5508000566666&text=",
       
     },
    /*  {
@@ -986,7 +986,7 @@ export const DATA = {
       posicao: "fourth",
       idinscricao: "aproveitamento",
       linkzap:
-        "https://api.whatsapp.com/send?phone=5571988357245&text=",
+        "https://api.whatsapp.com/send?phone=5508000566666&text=",
     },
    /*  {
       id: "7",
@@ -1001,7 +1001,7 @@ export const DATA = {
       posicao: "eight",
       idinscricao: "bolsa",
       linkzap:
-      "https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1%20UniFTC!%20Quero%20me%20inscrever%20no%20Vestibular%20Online%20",
+      "https://api.whatsapp.com/send?phone=5508000566666&text=Ol%C3%A1%20UniFTC!%20Quero%20me%20inscrever%20no%20Vestibular%20Online%20",
     }, */
   
   ]

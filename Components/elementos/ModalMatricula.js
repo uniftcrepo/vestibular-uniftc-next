@@ -109,7 +109,7 @@ const ModalMatricula = ({
                   colorTexto="#fff"
                   cor="#f31970"
                   texto={"Matricule-se agora"}
-                  link={`https://api.whatsapp.com/send?phone=5571988357245&text=Olá Rede UniFTC`}
+                  link={`https://api.whatsapp.com/send?phone=5508000566666&text=Olá Rede UniFTC`}
                   fonteSize="12px"
                   padding="10px 19px 14px 20px"
                   boxShadow="0 5px rgba(0,0,0,0.4)"

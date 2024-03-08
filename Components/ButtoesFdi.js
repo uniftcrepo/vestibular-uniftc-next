@@ -883,7 +883,7 @@ const ButtoesFdi = ({consultorId}) => {
                             idinscricao={"inscricaocrm-" + x.idinscricao}
                             idzap={"inscricaowhatsapp-" + x.idinscricao}
                             linkzap={
-                              "https://api.whatsapp.com/send?phone=5571988357245"
+                              "https://api.whatsapp.com/send?phone=5508000566666"
                             }
                             concurso={x.concurso}
                             tamanho={"300px"}
@@ -1023,7 +1023,7 @@ const ButtoesFdi = ({consultorId}) => {
                             idinscricao={"inscricaocrm-" + x.idinscricao}
                             idzap={"inscricaowhatsapp-" + x.idinscricao}
                             linkzap={
-                              "https://api.whatsapp.com/send?phone=5571988357245"
+                              "https://api.whatsapp.com/send?phone=5508000566666"
                             }
                             concurso={x.concurso}
                             tamanho={"251px"}
@@ -1106,7 +1106,7 @@ const ButtoesFdi = ({consultorId}) => {
              
               <div>
                 <div>
-                  <a href="https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1,%20UNIFTC">
+                  <a href="https://api.whatsapp.com/send?phone=5508000566666&text=Ol%C3%A1,%20UNIFTC">
                     Inscrever pelo WhatsApp
                   </a>
                 </div>
@@ -1164,7 +1164,7 @@ const ButtoesFdi = ({consultorId}) => {
              
               <div>
                 <div>
-                  <a href="https://api.whatsapp.com/send?phone=5571988357245&text=Ol%C3%A1,%20UNIFTC">
+                  <a href="https://api.whatsapp.com/send?phone=5508000566666&text=Ol%C3%A1,%20UNIFTC">
                     Inscrever pelo WhatsApp
                   </a>
                 </div>
