@@ -685,6 +685,8 @@ const ButtoesFdi = ({consultorId}) => {
     }
   };
 
+  console.log(fdiAbas.length)
+
   const Botoes = ({
     idinscricao,
     idzap,
@@ -795,7 +797,7 @@ const ButtoesFdi = ({consultorId}) => {
           <h1>VESTIBULAR UNIFTC</h1>
           <div>Escolha sua forma de ingresso</div>
         </Texto>
-        <DivBotoes>
+        {fdiAbas.length !== 0 ? (<DivBotoes>
           {habilitarQuadro && (
             <QuadroSelecao>
               <div className="tituloQuadroSelecao">
@@ -926,10 +928,10 @@ const ButtoesFdi = ({consultorId}) => {
                 })}
             </Tabs>
           )}
-        </DivBotoes>
+        </DivBotoes>) :  !isMobile && <div style={{textAlign: 'center', marginTop: '20px'}}>Aguarde a abertura de novos processos seletivos</div>}
       
 
-        <DivBotaoMobile className="container">
+        {fdiAbas.length !== 0 ? (<DivBotaoMobile className="container">
           {habilitarQuadro && (
             <QuadroSelecao>
               <div className="tituloQuadroSelecao">
@@ -1060,7 +1062,7 @@ const ButtoesFdi = ({consultorId}) => {
                 })}
             </Accordion>
           )}
-        </DivBotaoMobile>
+        </DivBotaoMobile>) : <DivBotaoMobile className="container">Aguarde a abertura de novos processos seletivos</DivBotaoMobile>}
         {/* {consultorId === undefined && ( */}
 
         {tipoUnidadeSelecionada !== "unex-medicina" ? (
