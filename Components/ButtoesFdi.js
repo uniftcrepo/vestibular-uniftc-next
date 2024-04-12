@@ -685,7 +685,7 @@ const ButtoesFdi = ({consultorId}) => {
     }
   };
 
-  console.log(fdiAbas.length)
+
 
   const Botoes = ({
     idinscricao,

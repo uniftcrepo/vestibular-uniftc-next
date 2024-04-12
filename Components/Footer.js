@@ -307,7 +307,7 @@ const Footer = () => {
             </div>
             <div className="links">
               <div className="footer-fdi">
-                <p>Vestibular UNIFTC 2024.1</p>
+                <p>Vestibular UNIFTC 2024.2</p>
                 <p>
                   <a
                     className="vestibular_uni"
@@ -366,7 +366,7 @@ const Footer = () => {
                   <p>
                     <a
                       className="vestibular_uni"
-                      href="https://suavocacao.uniftc.edu.br/"
+                      href={`${process.env.NEXT_PUBLIC_TESTE_VOCACIONAL_LINK}`}
                     >
                       Teste Vocacional
                     </a>

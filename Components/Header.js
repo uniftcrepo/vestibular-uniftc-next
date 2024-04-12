@@ -428,7 +428,8 @@ const loading = useSelector((state) => state.fdi.loading);
             </a>
             <ButtonContatos />
           </LogoTop>
-          <MenuTop>
+
+          {fdiAbas && fdiAbas.length !== 0 && (<MenuTop>
             <Dropdown>
               <Dropdown.Toggle
                 as={CustomToggle}
@@ -454,6 +455,8 @@ const loading = useSelector((state) => state.fdi.loading);
               </Dropdown.Menu>
             </Dropdown>
           </MenuTop>
+        )}
+
         </>)}
         </ContainerTop>
       </BarraMenuTopo1>

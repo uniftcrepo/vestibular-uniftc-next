@@ -130,7 +130,7 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
     cod_consultor: "",
     id_consultor: "",
     formulario_de_inscricao: "vestibular_consultor",
-    periodo_letivo: "2024.1",
+    periodo_letivo: "2024.2",
     site:"vestibular_uniftc"
 
   });
@@ -326,14 +326,14 @@ const Formulario = ({ params, url, concurso, consultor, faculdade, nomeAba, cons
       setUtm(
         "&utm_source=lp_ps&utm_medium=" +
         midia +
-        "&utm_campaign=vestibular_2024.1&utm_content=" +
+        "&utm_campaign=vestibular_2024.2&utm_content=" +
         conteudo
       );
       setFormInscreva({
         ...formInscreva,
         ["utm_source"]: "lp_ps",
         ["utm_medium"]: midia,
-        ["utm_campaign"]: "vestibular_2024.1",
+        ["utm_campaign"]: "vestibular_2024.2",
         ["utm_content"]: conteudo,
       });
     }
