@@ -797,7 +797,7 @@ const ButtoesFdi = ({consultorId}) => {
           <h1>VESTIBULAR UNIFTC</h1>
           <div>Escolha sua forma de ingresso</div>
         </Texto>
-        {fdiAbas.length !== 0 ? (<DivBotoes>
+        <DivBotoes>
           {habilitarQuadro && (
             <QuadroSelecao>
               <div className="tituloQuadroSelecao">
@@ -854,7 +854,7 @@ const ButtoesFdi = ({consultorId}) => {
               </div>
             </QuadroSelecao>
           )}
-          {!habilitarQuadro && (
+          {!habilitarQuadro && fdiAbas.length !== 0 ? (
             <Tabs
               activeKey={token}
               onSelect={(k) => setToken(k)}
@@ -927,11 +927,11 @@ const ButtoesFdi = ({consultorId}) => {
                   );
                 })}
             </Tabs>
-          )}
-        </DivBotoes>) :  !isMobile && <div style={{textAlign: 'center', marginTop: '20px'}}>Aguarde a abertura de novos processos seletivos</div>}
+          ):  !isMobile && <div style={{textAlign: 'center', marginTop: '20px'}}>Aguarde a abertura de novos processos seletivos</div>}
+        </DivBotoes>
       
 
-        {fdiAbas.length !== 0 ? (<DivBotaoMobile className="container">
+        <DivBotaoMobile className="container">
           {habilitarQuadro && (
             <QuadroSelecao>
               <div className="tituloQuadroSelecao">
@@ -975,7 +975,7 @@ const ButtoesFdi = ({consultorId}) => {
               </div>
             </QuadroSelecao>
           )}
-          {!habilitarQuadro && (
+          {!habilitarQuadro && fdiAbas.length !== 0 ? (
             <Accordion defaultActiveKey="1">
               {fdiAbas &&
                 fdiAbas.map((x, index) => {
@@ -1061,8 +1061,8 @@ const ButtoesFdi = ({consultorId}) => {
                   );
                 })}
             </Accordion>
-          )}
-        </DivBotaoMobile>) : <DivBotaoMobile className="container">Aguarde a abertura de novos processos seletivos</DivBotaoMobile>}
+          ): <DivBotaoMobile className="container">Aguarde a abertura de novos processos seletivos</DivBotaoMobile>}
+        </DivBotaoMobile>
         {/* {consultorId === undefined && ( */}
 
         {tipoUnidadeSelecionada !== "unex-medicina" ? (
